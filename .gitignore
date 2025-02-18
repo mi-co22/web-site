@@ -1,0 +1,14 @@
+# 一般的なファイル
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+.idea/
+.vscode/
+node_modules/
+vendor/
+wordpress/.htaccess
+package-lock.json
+# 課題用
+*.min.css
+*.min.css.map

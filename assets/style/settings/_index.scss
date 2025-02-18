@@ -1,0 +1,134 @@
+@use "sass:math";
+
+//-----------------------------------------------------
+// scss: 変数設定
+//-----------------------------------------------------
+
+// カラー
+$color-normal: #000;
+$color-second: #111;
+$color-pale: #09947b;
+$color-line: #ddd;
+$color-main: #168352;
+$color-contrast: #fff;
+// $color-attention: #5DD5AB;
+// $color-success: #46C4DB;
+$color-background: #f3f9f6;
+// フォントファミリー
+$font-family: "Noto Sans JP", serif;
+// コンテンツ幅の指定
+$sp-full-width: 390; // スマホ用のカンプ幅
+$pc-full-width: 1400; // PC用のカンプ幅
+$pc-content-width: 1200; // PC用のカンプのコンテンツ幅(ガイド線の幅)
+$pc-content-padding: 16; // PC用のカンプのコンテンツ幅 左右の余白
+$pc-subpage-content-width: 832; // PC用のカンプのコンテンツ幅 左右の余白
+
+// ブレイクポイントの指定
+$breakpoint-md: 768;
+$breakpoint-lg: $pc-content-width;
+
+// 本番用か否か
+$production: 1; //0の場合はpxで出力本番用の場合は1にする。
+//-----------------------------------------------------
+//  scss: ブレークポイント関数
+//-----------------------------------------------------
+$breakpoints: (
+    "md": "screen and (min-width: #{$breakpoint-md}px)",
+    "lg": "screen and (min-width: #{$breakpoint-lg}px)",
+    ) !default;
+
+@mixin mq($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+
+//-----------------------------------------------------
+//  scss: 変換関数群
+//-----------------------------------------------------
+
+// SP用: vwへの変換
+@function vw($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $sp-full-width
+);
+}
+
+// タブレット用: vwへの変換
+@function vwt($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px * 100vw / $pc-content-width);
+}
+
+// PC用: pxをremに変換
+@function px2Rem($px) {
+    @if $production !=1 {
+        @return $px * 1px;
+    }
+
+    @return calc($px / 16) * 1rem;
+}
+
+// 行間の指定
+// デザインデータの行間反映用
+
+@mixin lineheight($fontsize, $lin) {
+    // $fontsizeの数値の単位はpx
+    line-height: math.div($lin, $fontsize);
+}
+
+// 文字間の指定
+// デザインデータの文字間反映用
+@mixin l_spacing($spacing) {
+    letter-spacing: ($spacing / 1000) + em;
+}
+
+
+
+
+/* ===========================================
+ * base: ベース
+ * ======================================== */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    color: $color-normal;
+    font-family: $font-family;
+    line-height: 1.75; //PPで確認
+    font-size: vw(16);
+
+    @include mq {
+        font-size: vwt(16);
+    }
+
+    @include mq(lg) {
+        font-size: px2Rem(16);
+    }
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s;
+
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+            opacity: 0.6;
+        }
+    }
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
