@@ -5,6 +5,156 @@
 /* ===========================================
  * コンポーネント
  * ======================================== */
+.title {
+    font-size: vw(20);
+    //         font-family: "EB Garamond", serif;
+    font-weight: bold;
+    //         margin-bottom: vw(16);
+    //         line-height: 1.2;
+    text-align: center;
+
+    @include mq {
+        font-size: vwt(28);
+        //             margin-bottom: vwt(20);
+        //             @include lineheight(38, 54);
+        //             text-align: left;
+    }
+
+    @include mq(lg) {
+        font-size: px2Rem(28);
+        //             margin-bottom: px2Rem(20);
+    }
+
+    &--sub {
+        font-size: vw(16);
+        font-family: "Montserrat", serif;
+        font-weight: 600;
+        color: $color-main;
+        display: block;
+        line-height: 1.14;
+
+        @include mq {
+            font-size: vwt(20);
+            margin-bottom: vwt(1);
+            line-height: 1.4;
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(20);
+            margin-bottom: px2Rem(1);
+
+        }
+    }
+}
+
+.text {
+    &__break {
+        display: inline-block;
+
+        &--sp-inline {
+            display: inline;
+        }
+    }
+}
+
+.img-button {
+    display: block;
+    background: $color-main;
+    color: $color-contrast;
+    font-size: vw(18);
+    font-weight: bold;
+    display: flex;
+    align-items: anchor-center;
+
+    @include mq {
+        border-radius: vwt(24);
+        font-size: vwt(24);
+        padding: vwt(24);
+
+    }
+
+    @include mq(lg) {
+        border-radius: px2Rem(24);
+        font-size: px2Rem(24);
+        padding: px2Rem(24);
+
+
+
+    }
+
+    &--3 {
+        @include mq {
+            // border-radius: vwt(24);
+            // font-size: vwt(24);
+            padding: vwt(19);
+
+        }
+
+        @include mq(lg) {
+            // border-radius: px2Rem(24);
+            // font-size: px2Rem(24);
+            padding: px2Rem(19);
+
+
+
+        }
+    }
+
+    &__thumb {
+        @include mq {
+            width: vwt(133);
+            margin-right: vwt(30);
+
+        }
+
+        @include mq(lg) {
+            width: px2Rem(133);
+            margin-right: px2Rem(30);
+        }
+
+        &--3 {
+            @include mq {
+                margin-right: vwt(12);
+
+
+            }
+
+            @include mq(lg) {
+                margin-right: px2Rem(12);
+
+
+
+
+            }
+        }
+    }
+
+    &__title {
+        &--3 {
+            @include mq {
+                font-size: vwt(20);
+
+
+            }
+
+            @include mq(lg) {
+                font-size: px2Rem(20);
+
+
+
+
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
 .page-header {
     margin-top: vw(63);
 
@@ -136,7 +286,6 @@
     width: 100%;
     height: vw(63);
     background: $color-contrast;
-    // box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 
     @include mq {
         height: vwt(114);
@@ -150,17 +299,17 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 100%;
 
         @include mq {
             max-width: vwt($pc-content-width);
             margin-inline: auto;
-            padding: 0 vwt($pc-content-padding);
-            height: 100%;
+            padding: 0 0 0 vwt($pc-content-padding);
         }
 
         @include mq(lg) {
             max-width: px2Rem(1200);
-            padding: 0 px2Rem($pc-content-padding);
+            padding: 0 0 0 px2Rem($pc-content-padding);
         }
     }
 
@@ -187,8 +336,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: vw(70);
-    height: vw(70);
+    width: vw(56);
+    height: 100%;
     border: 0;
     cursor: pointer;
 
@@ -214,15 +363,14 @@
         }
 
         &::before {
-            top: vw(-10);
+            top: vw(-8);
         }
 
         &::after {
-            bottom: vw(-10);
+            bottom: vw(-8);
         }
 
         /*閉じる*/
-
         &--expanded {
             background: transparent;
 
@@ -242,8 +390,6 @@
 
 }
 
-
-
 /* ===========================================
  * グローバルナビゲーション
  * ======================================== */
@@ -253,16 +399,14 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: vw(70);
+    top: vw(63);
     width: vw(358);
     background: $color-main;
     overflow-y: auto;
     color: $color-contrast;
     font-weight: bold;
     text-align: center;
-    // @include lineheight(18, 26);
-    // font-size: vw(18);
-    border-radius: vw(18);
+    border-radius: vw(24);
 
     @include mq {
         align-items: center;
@@ -277,31 +421,22 @@
 
 
     &__list {
-        padding: vw(22) vw(20);
+        line-height: 1;
+        padding: vw(22) vw(20) vw(17);
 
         @include mq {
             display: flex;
             padding: 0;
-            // margin-right: vwt(23);
-        }
-
-        @include mq(lg) {
-            // margin-right: px2Rem(23);
         }
     }
 
     &__item {
-        padding-bottom: vw(20);
-        margin-bottom: vw(20);
-
-        &--mb-none {
-            margin-bottom: 0;
+        @include mq {
+            margin-left: vwt(9);
         }
 
-        @include mq {
-            border-bottom: none;
-            padding-bottom: 0;
-            margin-bottom: 0;
+        @include mq(lg) {
+            margin-left: px2Rem(9);
         }
     }
 
@@ -309,18 +444,19 @@
         display: block;
         font-size: vw(18);
         font-weight: bold;
+        padding: vw(16);
+        margin-bottom: vw(7);
 
         @include mq {
-            color: inherit;
-
             display: block;
-            padding: vwt(24);
+            padding: vwt(20) vwt(15);
+            margin-bottom: 0;
             font-size: vwt(16);
-            @include lineheight(20, 36);
+            // @include lineheight(20, 36);
         }
 
         @include mq(lg) {
-            padding: px2Rem(24);
+            padding: px2Rem(20) px2Rem(15);
             font-size: px2Rem(16);
         }
 
@@ -334,7 +470,10 @@
             color: $color-main;
         }
     }
+
 }
+
+
 
 /* ===========================================
  * フッター
@@ -392,50 +531,48 @@
  * メインビジュアル
  * ======================================== */
 .mainvisual {
-    margin-top: vw(63);
+    margin-top: vw(72);
+
     @include mq {
-        margin-top: vwt(114);
+        margin-top: vwt(151);
     }
 
     @include mq(lg) {
-        margin-top: px2Rem(114);
+        margin-top: px2Rem(151);
     }
 
     &__container {
+        @include sp-container();
+
         @include mq {
             max-width: vwt($pc-content-width);
             padding: 0 vwt($pc-content-padding);
-            margin: 0 auto;
         }
 
         @include mq(lg) {
             max-width: px2Rem($pc-content-width);
             padding: 0 px2Rem($pc-content-padding);
         }
-
     }
 
     &__box {
-
-
         @include mq {
-
             display: flex;
             justify-content: space-between;
+            margin: 0 vwt(33) 0 vwt(34);
         }
 
         @include mq(lg) {
+            margin: 0 px2Rem(33) 0 px2Rem(34);
         }
     }
 
     &__title {
         font-size: vw(28);
-        //     @include lineheight(41, 51);
-        //     @include l_spacing(300);
+        font-weight: 600;
 
         @include mq {
             font-size: vwt(40);
-            //         @include lineheight(50, 68)
         }
 
         @include mq(lg) {
@@ -445,18 +582,299 @@
 
     &__text-area {
         font-size: vw(15);
+        margin-top: vw(15);
+        line-break: anywhere;
 
         @include mq {
             font-size: vwt(15);
             width: vwt(530);
+            margin-top: vwt(11);
         }
 
         @include mq(lg) {
             font-size: px2Rem(15);
             width: px2Rem(530);
-
+            margin-top: px2Rem(11);
         }
 
     }
 
+    &__image {
+        display: block;
+        margin-top: vw(26);
+
+        @include mq {
+            margin-top: vwt(58);
+        }
+
+        @include mq(lg) {
+            margin-top: px2Rem(58);
+
+        }
+    }
+}
+
+/* ===========================================
+ * レイアウト
+ * ======================================== */
+/** 私たちについて **/
+.about {
+    color: $color-second;
+
+    &__container {
+        padding-top: vw(53);
+
+        @include mq {
+            width: vwt(987);
+            padding: vwt(58) vwt($pc-content-padding) vwt(64);
+            margin-inline: auto;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(987);
+            padding: px2Rem(58) px2Rem($pc-content-padding) px2Rem(64);
+        }
+    }
+
+    &__box {
+        margin-top: vw(17);
+        padding: vw(32) 0;
+        background: url(/assets/image/about_us_sp.jpg)center center / cover no-repeat;
+
+        @include mq {
+            display: flex;
+            background: none;
+            padding: 0;
+            margin-top: vwt(22);
+            // align-items: center;
+            // gap: vwt(155);
+            justify-content: space-between;
+        }
+
+        @include mq(lg) {
+            margin-top: px2Rem(22);
+            // gap: px2Rem(155);
+        }
+    }
+
+    &__body {
+        background: rgba(255, 255, 255, 0.8);
+        border-radius: vw(32);
+        @include sp-container();
+        padding: vw(14) vw(25) vw(19);
+
+        @include mq {
+            background: none;
+            border-radius: 0;
+            width: vwt(405);
+            padding: 0;
+            margin: 0;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(405);
+        }
+    }
+
+    &__lead {
+        font-weight: bold;
+        font-size: vw(18);
+        margin-bottom: vw(7);
+
+        @include mq {
+            font-size: vwt(20);
+            margin-top: vwt(100);
+            margin-bottom: vwt(25);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(20);
+            margin-top: px2Rem(100);
+            margin-bottom: px2Rem(25);
+        }
+    }
+
+    &__image {
+        display: none;
+
+        @include mq {
+            display: block;
+            width: vwt(390);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(390);
+        }
+    }
+
+    &__text {
+        font-size: vw(15);
+
+        @include mq {
+            font-size: vwt(15);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(15);
+        }
+    }
+}
+
+/** 3つの理由 **/
+.features {
+    background: $color-background;
+
+    &__container {
+        padding: vw(52) 0 vw(51);
+        @include sp-container();
+
+        @include mq {
+            width: vwt($pc-content-width);
+            padding: vwt(58) vwt($pc-content-padding) vwt(63);
+            margin-inline: auto;
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-content-width);
+            padding: px2Rem(58) px2Rem($pc-content-padding) px2Rem(63);
+        }
+    }
+
+
+    &__card-lists {
+        margin-top: vw(16);
+
+        @include mq {
+            display: flex;
+            flex-wrap: wrap;
+            gap: vwt(30);
+            margin-top: vwt(21);
+        }
+
+        @include mq(lg) {
+            gap: px2Rem(30);
+            margin-top: px2Rem(21);
+        }
+
+    }
+
+    &__card {
+        overflow: hidden;
+        margin-bottom: vw(20);
+
+        @include mq {
+            width: vwt(369);
+            border-radius: vwt(24);
+            box-shadow: 0 vwt(2) vwt(10) rgba(0, 0, 0, 0.05);
+            margin-bottom: 0;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(369);
+            border-radius: px2Rem(24);
+            box-shadow: 0 px2Rem(2) px2Rem(10) rgba(0, 0, 0, 0.05);
+
+        }
+    }
+
+    &__card-body {
+        background: $color-contrast;
+        padding: vw(12) vw(16) vw(13);
+
+        @include mq {
+            padding: vwt(12) vwt(21) vwt(15);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(12) px2Rem(21) px2Rem(15);
+        }
+    }
+
+    &__card-text {
+        font-size: vw(18);
+        color: $color-second;
+        font-weight: bold;
+
+        @include mq {
+            font-size: vwt(19);
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(19);
+
+        }
+
+    }
+}
+
+/** 製品・サービス紹介 **/
+
+.products {
+
+    &__container {
+
+
+        @include mq {
+            width: vwt(1132);
+            padding: vwt(62) vwt($pc-content-padding) vwt(63);
+            margin-inline: auto;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(1132);
+            padding: px2Rem(62) px2Rem($pc-content-padding) px2Rem(63);
+        }
+    }
+
+    &__button-lists {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mq {
+            gap: vwt(50);
+            margin-top: vwt(23);
+        }
+
+        @include mq(lg) {
+            gap: px2Rem(50);
+            margin-top: px2Rem(23);
+
+        }
+
+        &--3 {
+            @include mq {
+                margin-top: vwt(40);
+
+            }
+
+            @include mq(lg) {
+                margin-top: px2Rem(40);
+
+
+            }
+        }
+    }
+
+    &__button {
+        @include mq {
+            width: vwt(525);
+
+        }
+
+        @include mq(lg) {
+            width: px2Rem(525);
+        }
+
+        &--3 {
+            @include mq {
+                width: vwt(333);
+
+            }
+
+            @include mq(lg) {
+                width: px2Rem(333);
+            }
+        }
+    }
 }

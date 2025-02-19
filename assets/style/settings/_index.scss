@@ -88,8 +88,11 @@ $breakpoints: (
 @mixin l_spacing($spacing) {
     letter-spacing: ($spacing / 1000) + em;
 }
-
-
+// SPの共通コンテナ幅を呼び出す
+@mixin sp-container($size: 358) {
+    width: vw($size);
+    margin-inline: auto;
+}
 
 
 /* ===========================================
