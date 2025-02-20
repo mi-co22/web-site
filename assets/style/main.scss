@@ -635,6 +635,349 @@
 
 }
 
+.accordion {
+    // width: 100%;
+
+    @include mq {
+        // width: vwt(800);
+    }
+
+    @include mq(lg) {
+        // width: px2Rem(800);
+    }
+
+    &__item {
+        border: 1px solid #ccc;
+        overflow: hidden;
+
+        @include mq {
+            border-radius: vwt(16);
+        }
+
+        @include mq(lg) {
+            border-radius: px2Rem(16);
+
+
+
+        }
+    }
+
+    &__wrapper {
+        @include mq {
+            width: vwt(600);
+            margin-inline: auto;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(600);
+        }
+    }
+
+    &__question {
+        width: 100%;
+        display: flex;
+        // color: $color-second;
+        // align-items: flex-start;
+        padding: vw(16) vw(16) vw(17);
+        font-weight: bold;
+        // text-align: left;
+        cursor: pointer;
+        // background: $color-contrast;
+
+
+        @include mq {
+            // align-items: center;
+            padding: vwt(19) vwt(31) vwt(18) vwt(32);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(19) px2Rem(31) px2Rem(18) px2Rem(32);
+
+
+
+        }
+
+
+
+        &--expanded {
+            // padding: vw(16) vw(16) vw(12);
+
+
+            // @include mq {
+            //     padding: vwt(25) vwt(24) vwt(20) vwt(24);
+            // }
+
+            // @include mq(lg) {
+            //     padding: px2Rem(25) px2Rem(24) px2Rem(20) px2Rem(24);
+            // }
+
+            // .faq__action::before {
+            //     top: 60%;
+            //     transform: translate(-50%, -50%) rotate(180deg);
+            // }
+        }
+
+
+
+    }
+
+    // &__term:not(:first-child) {
+    //     margin-top: vw(20);
+
+    //     @include mq {
+    //         margin-top: vwt(24);
+    //     }
+
+    //     @include mq(lg) {
+    //         margin-top: px2Rem(24);
+    //     }
+    // }
+
+    &__q-icon {
+        color: $color-main;
+        flex-shrink: 0;
+        line-height: 1;
+        // vertical-align: middle;
+        font-size: vw(16);
+        // margin-top: vw(6);
+        font-family: "Montserrat", serif;
+        font-weight: bold;
+
+        @include mq {
+            font-size: vwt(24);
+            margin-right: vwt(15);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(24);
+            margin-right: px2Rem(15);
+
+        }
+    }
+
+    &__content {
+        display: block;
+        flex: 1;
+
+        @include mq {
+            // margin-top: vwt(-2);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(24);
+            // margin-top: px2Rem(-2);
+
+
+        }
+    }
+
+    &__categories {
+        line-height: 1;
+        display: block;
+
+        @include mq {
+
+            height: vwt(24);
+            margin-top: vwt(-3);
+        }
+
+        @include mq(lg) {
+            height: px2Rem(24);
+            margin-top: px2Rem(-3);
+        }
+    }
+
+    &__category {
+        color: $color-main;
+        border: 1px solid $color-main;
+        font-weight: 400;
+
+        @include mq {
+            font-size: vwt(11);
+            padding: vwt(3) vwt(11);
+            border-radius: vwt(4);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(11);
+            padding: px2Rem(3) px2Rem(11);
+
+            border-radius: px2Rem(4);
+
+        }
+    }
+
+    &__q-text {
+        display: block;
+        font-size: vw(16);
+        // flex-grow: 1;
+        // margin-left: vw(12);
+        @include lineheight(15, 28);
+
+        @include mq {
+            font-size: vwt(18);
+            margin-top: vwt(15);
+            line-height: 1.6;
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            margin-top: px2Rem(15);
+
+        }
+    }
+
+    &__answer {
+        display: flex;
+        padding: 0 vw(16) vw(30) vw(17);
+
+
+        @include mq {
+            padding: 0 vwt(26) vwt(20) vwt(24);
+
+
+        }
+
+        @include mq(lg) {
+            padding: 0 px2Rem(26) px2Rem(20) px2Rem(24);
+            // border-radius: px2Rem(16);
+
+        }
+    }
+
+    &__a-icon {
+        flex-shrink: 0;
+        font-size: vw(16);
+        font-weight: bold;
+        line-height: 1;
+        vertical-align: middle;
+        margin-top: vw(6);
+        font-family: "EB Garamond", serif;
+        font-weight: 500;
+
+        @include mq {
+            font-size: vwt(18);
+            margin-top: vwt(5);
+
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            margin-top: px2Rem(5);
+
+        }
+    }
+
+    &__a-text {
+        margin-left: vw(12);
+        font-size: vw(15);
+
+        @include mq {
+            font-size: vwt(15);
+            margin-left: vwt(16);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(15);
+            margin-left: px2Rem(16);
+        }
+
+        p {
+            @include lineheight(15, 28);
+
+            @include mq {
+                line-height: 1.85;
+            }
+        }
+    }
+
+    &__panel {
+        background: $color-contrast;
+        display: none;
+    }
+
+    &__action {
+        flex-shrink: 0;
+        position: relative;
+        display: block;
+        width: vw(13);
+        height: vw(28);
+        margin-left: auto;
+
+        @include mq {
+            width: vwt(20);
+            height: vwt(20);
+            top: vwt(6);
+        }
+
+        @include mq {
+            width: px2Rem(20);
+            height: px2Rem(20);
+            top: px2Rem(6);
+
+        }
+
+        // &::before {
+        //     background: url(/assets/image/icon_caret_up_fill.svg)center center / contain no-repeat;
+        //     position: absolute;
+        //     content: "";
+        //     display: block;
+        //     width: vw(10);
+        //     height: vw(10);
+        //     transition: all .3s;
+        //     top: 43%;
+        //     left: 50%;
+        //     transform: translateX(-50%) rotate(0deg);
+
+        //     @include mq {
+        //         top: 50%;
+        //         transform: translate(-50%, -50%) rotate(0deg);
+
+        //         width: vwt(12);
+        //         height: vwt(12);
+        //     }
+
+        //     @include mq {
+        //         width: px2Rem(12);
+        //         height: px2Rem(12);
+        //     }
+        // }
+        &::before,
+        &::after {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            content: "";
+            display: block;
+            width: 100%;
+            height: 0;
+            border-top: 2px solid;
+            transition: all .3s;
+
+            @include mq {
+
+                width: vwt(20);
+                height: vwt(3);
+            }
+
+            @include mq {
+                width: px2Rem(20);
+                height: px2Rem(3);
+            }
+        }
+
+        &::after {
+            transform: rotate(90deg);
+
+            .accordion__question--expanded & {
+                transform: rotate(0);
+            }
+        }
+    }
+
+}
+
 /* ===========================================
  * ヘッダー
  * ======================================== */
@@ -826,7 +1169,9 @@
         }
 
         &--current {
-            color: $color-main;
+            @include mq {
+                color: $color-main;
+            }
         }
     }
 
@@ -1830,6 +2175,37 @@
             }
 
             @include mq(lg) {}
+        }
+    }
+}
+
+/** よくあるご質問 **/
+.faq {
+    padding: vw(30) 0 vw(63);
+
+    @include mq {
+        padding: vwt(43) vwt($pc-content-padding) vwt(70);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(43) px2Rem($pc-content-padding) px2Rem(70);
+    }
+
+    &__container {
+        //         padding: 0 vw(16) vw(51);
+        //         margin-inline: auto;
+        @include sp-container();
+
+        @include mq {
+            width: vwt($pc-subpage-content-width);
+            // padding: 0 vwt($pc-content-padding);
+            // margin: vwt(83) auto vwt(80);
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-subpage-content-width);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rsem(83) auto px2Rem(80);
         }
     }
 }
