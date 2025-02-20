@@ -195,12 +195,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .news-list__time {
-    width: 7.4166666667vw;
+    width: 7.1666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .news-list__time {
-    width: 5.5625rem;
+    width: 5.375rem;
   }
 }
 .news-list__data {
@@ -261,6 +261,7 @@ img {
 }
 @media screen and (min-width: 768px) {
   .label {
+    min-width: auto;
     border-radius: 0.3333333333vw;
     font-size: 1.0833333333vw;
     padding: 0.5833333333vw;

@@ -194,12 +194,12 @@
 
         @include mq {
 
-            width: vwt(89);
+            width: vwt(86);
 
         }
 
         @include mq(lg) {
-            width: px2Rem(89);
+            width: px2Rem(86);
 
         }
     }
@@ -273,6 +273,7 @@
     vertical-align: middle;
 
     @include mq {
+        min-width: auto;
         border-radius: vwt(4);
         font-size: vwt(13);
         padding: vwt(7);
