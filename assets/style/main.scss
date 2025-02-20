@@ -68,7 +68,7 @@
     display: flex;
     align-items: center;
     border-radius: vw(24);
-    padding: vw(20) vw(25);
+    padding: vw(20) vw(24);
 
     @include mq {
         border-radius: vwt(24);
@@ -81,6 +81,12 @@
         border-radius: px2Rem(24);
         font-size: px2Rem(24);
         padding: px2Rem(24) px2Rem(32);
+    }
+
+    &:hover {
+        opacity: 1;
+        background: #dffaec;
+
     }
 
     &--3 {
@@ -101,7 +107,7 @@
     &__thumb {
         flex-shrink: 0;
         width: vw(100);
-        margin-right: vw(16);
+        margin-right: vw(17);
 
         @include mq {
             width: vwt(133);
@@ -134,6 +140,10 @@
     }
 
     &__title {
+        .img-button:hover & {
+            color: $color-main;
+        }
+
         &--3 {
             @include mq {
                 font-size: vwt(20);
@@ -152,6 +162,144 @@
     }
 }
 
+.news-list {
+    border-top: 1px solid $color-line;
+    // line-height: 1.5;
+
+    &__date {
+        flex-shrink: 0;
+        // width: vw(92);
+        font-size: vw(15);
+
+        font-weight: 400;
+        padding: vw(16) 0 vw(8);
+
+        @include mq {
+            font-size: vwt(14);
+            // width: vwt(89);
+            padding: 0;
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(14);
+            // width: px2Rem(89);
+
+        }
+    }
+
+    &__time {
+        display: inline-block;
+        // vertical-align: middle;
+        width: vw(89);
+
+        @include mq {
+
+            width: vwt(89);
+
+        }
+
+        @include mq(lg) {
+            width: px2Rem(89);
+
+        }
+    }
+
+    // @include mq {
+    &__data {
+        display: flex;
+        align-items: center;
+
+        flex-wrap: wrap;
+    }
+
+
+
+
+    // }
+
+    &__item {
+        display: flex;
+        flex-wrap: wrap;
+        border-bottom: 1px solid $color-line;
+
+        @include mq {
+            flex-direction: row;
+            align-items: center;
+            padding: vwt(15) 0 vwt(17);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(15) 0 px2Rem(17);
+
+        }
+    }
+
+    &__link {
+        color: $color-pale;
+        font-weight: bold;
+        display: block;
+        font-size: vw(15);
+        margin-left: vw(1);
+
+        @include mq {
+            display: inline-block;
+
+            font-size: vwt(15);
+            margin-left: vwt(24);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(15);
+            margin-left: px2Rem(24);
+
+        }
+    }
+
+
+}
+
+.label {
+    background: #473221;
+    color: $color-contrast;
+    text-align: center;
+    line-height: 1.1;
+    font-size: vw(13);
+    border-radius: vw(4);
+    padding: vw(6);
+
+    height: vw(28);
+    display: inline-block;
+    min-width: vw(134);
+    vertical-align: middle;
+
+    @include mq {
+        border-radius: vwt(4);
+        font-size: vwt(13);
+        padding: vwt(7);
+        width: vwt(134);
+        height: vwt(28);
+    }
+
+    @include mq(lg) {
+        border-radius: px2Rem(4);
+        font-size: px2Rem(13);
+        padding: px2Rem(7);
+        width: px2Rem(134);
+        height: px2Rem(28);
+    }
+}
+
+.button {
+    display: inline-block;
+    border-radius: 9999px;
+    color: $color-contrast;
+    text-align: center;
+    font-weight: bold;
+
+    &:hover {
+        opacity: 1;
+    }
+}
 
 
 
@@ -733,7 +881,7 @@
 /** 3つの理由 **/
 .features {
     background: $color-background;
-    padding: vw(52) 0 vw(51);
+    padding: vw(52) 0 vw(36);
 
     @include mq {
         padding: vwt(57) vwt($pc-content-padding) vwt(63);
@@ -830,7 +978,7 @@
 
 /** 製品・サービス紹介 **/
 .products {
-    padding: vw(40) 0 vw(51);
+    padding: vw(55) 0 vw(37);
 
     @include mq {
         padding: vwt(62) vwt($pc-content-padding) vwt(63);
@@ -910,34 +1058,27 @@
 }
 
 /** 事例紹介 **/
-
 .case {
     background: $color-background;
-    padding: vw(37) 0 vw(51);
+    padding: vw(51) 0 vw(23);
 
     @include mq {
-        padding: vwt(57) vwt($pc-content-padding) vwt(80);
+        padding: vwt(57) vwt($pc-content-padding) vwt(60);
     }
 
     @include mq(lg) {
-        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(80);
+        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(60);
     }
 
     &__container {
-        //         padding: 0 vw(16) vw(51);
-        //         margin-inline: auto;
         @include sp-container();
 
         @include mq {
             width: vwt($pc-container-width);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             width: px2Rem($pc-container-width);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rsem(83) auto px2Rem(80);
         }
     }
 
@@ -962,7 +1103,7 @@
     }
 
     &__card {
-        margin-bottom: vw(26);
+        margin-bottom: vw(27);
 
         @include mq {
             width: vwt(369);
@@ -996,7 +1137,7 @@
         color: $color-pale;
         font-size: vw(18);
         font-weight: bold;
-        margin-top: vw(8);
+        margin-top: vw(7);
         margin-left: vw(2);
 
         @include mq {
@@ -1009,9 +1150,99 @@
         @include mq(lg) {
             margin-top: px2Rem(8);
             font-size: px2Rem(19);
+        }
+    }
+}
+
+/** お知らせ **/
+.news {
+    padding: vw(52) 0 vw(51);
+
+    @include mq {
+        padding: vwt(57) vwt($pc-content-padding) vwt(80);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(80);
+    }
+
+    &__container {
+        @include sp-container();
 
 
+        @include mq {
+            width: vwt(900);
+            // padding: 0 vwt($pc-content-padding);
+            // margin: vwt(83) auto vwt(80);
+        }
 
+        @include mq(lg) {
+            width: px2Rem(900);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rem(83) auto px2Rem(80);
+        }
+    }
+
+    &__lists {
+        margin-top: vw(16);
+
+        @include mq {
+
+            margin-top: vwt(22);
+        }
+
+        @include mq(lg) {
+
+            margin-top: px2Rem(22);
+
+        }
+    }
+
+    &__button-wrapper {
+        text-align: center;
+
+        @include mq {
+
+            margin-top: vwt(32);
+        }
+
+        @include mq(lg) {
+
+            margin-top: px2Rem(32);
+
+        }
+    }
+
+    &__button {
+        background: $color-pale;
+
+        @include mq {
+            min-width: vwt(300);
+            font-size: vwt(18);
+            padding: vwt(17);
+            box-shadow: 0 vwt(5) 0 #066655;
+            /* 影の太さ・色 */
+        }
+
+        @include mq(lg) {
+            min-width: px2Rem(300);
+            font-size: px2Rem(18);
+            padding: px2Rem(17);
+            box-shadow: 0 px2Rem(5) 0 #066655;
+
+        }
+
+        &:hover {
+            @include mq {
+                box-shadow: 0 vwt(2) 0 #066655;
+                transform: translateY(5px);
+            }
+
+            @include mq(lg) {
+
+                box-shadow: 0 px2Rem(2) 0 #066655;
+
+            }
         }
     }
 }
