@@ -52,7 +52,8 @@
     &__break {
         display: inline-block;
 
-        &--sp-inline {
+        &--sp-inline,
+        &--pc-inline {
             display: inline;
         }
     }
@@ -65,36 +66,32 @@
     font-size: vw(18);
     font-weight: bold;
     display: flex;
-    align-items: anchor-center;
+    align-items: center;
+    border-radius: vw(24);
+    padding: vw(20) vw(25);
 
     @include mq {
         border-radius: vwt(24);
         font-size: vwt(24);
-        padding: vwt(24);
+        padding: vwt(24) vwt(32);
 
     }
 
     @include mq(lg) {
         border-radius: px2Rem(24);
         font-size: px2Rem(24);
-        padding: px2Rem(24);
-
-
-
+        padding: px2Rem(24) px2Rem(32);
     }
 
     &--3 {
         @include mq {
-            // border-radius: vwt(24);
-            // font-size: vwt(24);
-            padding: vwt(19);
+
+            padding: vwt(19) vwt(25) vwt(21);
 
         }
 
         @include mq(lg) {
-            // border-radius: px2Rem(24);
-            // font-size: px2Rem(24);
-            padding: px2Rem(19);
+            padding: px2Rem(19) px2Rem(25) px2Rem(21);
 
 
 
@@ -102,26 +99,32 @@
     }
 
     &__thumb {
+        flex-shrink: 0;
+        width: vw(100);
+        margin-right: vw(16);
+
         @include mq {
             width: vwt(133);
-            margin-right: vwt(30);
+            margin-right: vwt(29);
 
         }
 
         @include mq(lg) {
             width: px2Rem(133);
-            margin-right: px2Rem(30);
+            margin-right: px2Rem(29);
         }
 
         &--3 {
             @include mq {
-                margin-right: vwt(12);
+                width: vwt(110);
+                margin-right: vwt(19);
 
 
             }
 
             @include mq(lg) {
-                margin-right: px2Rem(12);
+                width: px2Rem(110);
+                margin-right: px2Rem(19);
 
 
 
@@ -302,7 +305,7 @@
         height: 100%;
 
         @include mq {
-            max-width: vwt($pc-content-width);
+            max-width: vwt($pc-container-width);
             margin-inline: auto;
             padding: 0 0 0 vwt($pc-content-padding);
         }
@@ -486,12 +489,12 @@
         margin-inline: auto;
 
         @include mq {
-            width: vwt($pc-content-width);
+            width: vwt($pc-container-width);
             padding: vwt(40) vwt($pc-content-padding);
         }
 
         @include mq(lg) {
-            width: px2Rem($pc-content-width);
+            width: px2Rem($pc-container-width);
             padding: px2Rem(40) px2Rem($pc-content-padding);
         }
     }
@@ -535,23 +538,27 @@
 
     @include mq {
         margin-top: vwt(151);
+        padding: 0 vwt($pc-content-padding);
+
     }
 
     @include mq(lg) {
         margin-top: px2Rem(151);
+        padding: 0 px2Rem($pc-content-padding);
+
     }
 
     &__container {
         @include sp-container();
 
         @include mq {
-            max-width: vwt($pc-content-width);
-            padding: 0 vwt($pc-content-padding);
+            max-width: vwt($pc-container-width);
+            // padding: 0 vwt($pc-content-padding);
         }
 
         @include mq(lg) {
-            max-width: px2Rem($pc-content-width);
-            padding: 0 px2Rem($pc-content-padding);
+            max-width: px2Rem($pc-container-width);
+            // padding: 0 px2Rem($pc-content-padding);
         }
     }
 
@@ -625,13 +632,13 @@
         padding-top: vw(53);
 
         @include mq {
-            width: vwt(987);
+            width: vwt(1000);
             padding: vwt(58) vwt($pc-content-padding) vwt(64);
             margin-inline: auto;
         }
 
         @include mq(lg) {
-            width: px2Rem(987);
+            width: px2Rem(1000);
             padding: px2Rem(58) px2Rem($pc-content-padding) px2Rem(64);
         }
     }
@@ -700,10 +707,13 @@
         @include mq {
             display: block;
             width: vwt(390);
+            margin-right: vwt(14);
         }
 
         @include mq(lg) {
             width: px2Rem(390);
+            margin-right: px2Rem(14);
+
         }
     }
 
@@ -723,20 +733,27 @@
 /** 3つの理由 **/
 .features {
     background: $color-background;
+    padding: vw(52) 0 vw(51);
+
+    @include mq {
+        padding: vwt(57) vwt($pc-content-padding) vwt(63);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(63);
+    }
 
     &__container {
-        padding: vw(52) 0 vw(51);
         @include sp-container();
 
         @include mq {
-            width: vwt($pc-content-width);
-            padding: vwt(58) vwt($pc-content-padding) vwt(63);
+            width: vwt($pc-container-width);
+
             margin-inline: auto;
         }
 
         @include mq(lg) {
-            width: px2Rem($pc-content-width);
-            padding: px2Rem(58) px2Rem($pc-content-padding) px2Rem(63);
+            width: px2Rem($pc-container-width);
         }
     }
 
@@ -748,12 +765,12 @@
             display: flex;
             flex-wrap: wrap;
             gap: vwt(30);
-            margin-top: vwt(21);
+            margin-top: vwt(22);
         }
 
         @include mq(lg) {
             gap: px2Rem(30);
-            margin-top: px2Rem(21);
+            margin-top: px2Rem(22);
         }
 
     }
@@ -761,11 +778,14 @@
     &__card {
         overflow: hidden;
         margin-bottom: vw(20);
+        border-radius: vw(24);
+
+        box-shadow: 0 vw(2) vw(10) rgba(0, 0, 0, 0.05);
 
         @include mq {
             width: vwt(369);
             border-radius: vwt(24);
-            box-shadow: 0 vwt(2) vwt(10) rgba(0, 0, 0, 0.05);
+
             margin-bottom: 0;
         }
 
@@ -782,11 +802,11 @@
         padding: vw(12) vw(16) vw(13);
 
         @include mq {
-            padding: vwt(12) vwt(21) vwt(15);
+            padding: vwt(11) vwt(21) vwt(15);
         }
 
         @include mq(lg) {
-            padding: px2Rem(12) px2Rem(21) px2Rem(15);
+            padding: px2Rem(11) px2Rem(21) px2Rem(15);
         }
     }
 
@@ -809,27 +829,33 @@
 }
 
 /** 製品・サービス紹介 **/
-
 .products {
+    padding: vw(40) 0 vw(51);
+
+    @include mq {
+        padding: vwt(62) vwt($pc-content-padding) vwt(63);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(62) px2Rem($pc-content-padding) px2Rem(63);
+    }
 
     &__container {
-
+        @include sp-container();
 
         @include mq {
-            width: vwt(1132);
-            padding: vwt(62) vwt($pc-content-padding) vwt(63);
-            margin-inline: auto;
+            width: vwt(1100);
         }
 
         @include mq(lg) {
-            width: px2Rem(1132);
-            padding: px2Rem(62) px2Rem($pc-content-padding) px2Rem(63);
+            width: px2Rem(1100);
         }
     }
 
     &__button-lists {
         display: flex;
         flex-wrap: wrap;
+        margin-top: vw(16);
 
         @include mq {
             gap: vwt(50);
@@ -843,6 +869,8 @@
         }
 
         &--3 {
+            margin-top: 0;
+
             @include mq {
                 margin-top: vwt(40);
 
@@ -857,9 +885,11 @@
     }
 
     &__button {
+        margin-bottom: vw(20);
+
         @include mq {
             width: vwt(525);
-
+            margin-bottom: 0;
         }
 
         @include mq(lg) {
@@ -875,6 +905,113 @@
             @include mq(lg) {
                 width: px2Rem(333);
             }
+        }
+    }
+}
+
+/** 事例紹介 **/
+
+.case {
+    background: $color-background;
+    padding: vw(37) 0 vw(51);
+
+    @include mq {
+        padding: vwt(57) vwt($pc-content-padding) vwt(80);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(80);
+    }
+
+    &__container {
+        //         padding: 0 vw(16) vw(51);
+        //         margin-inline: auto;
+        @include sp-container();
+
+        @include mq {
+            width: vwt($pc-container-width);
+            // padding: 0 vwt($pc-content-padding);
+            // margin: vwt(83) auto vwt(80);
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-container-width);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rsem(83) auto px2Rem(80);
+        }
+    }
+
+    &__card-lists {
+        margin-top: vw(17);
+
+        @include mq {
+            margin-top: vwt(22);
+            display: flex;
+            flex-wrap: wrap;
+            gap: vwt(30);
+
+        }
+
+        @include mq(lg) {
+            margin-top: px2Rem(22);
+            gap: px2Rem(30);
+
+
+        }
+
+    }
+
+    &__card {
+        margin-bottom: vw(26);
+
+        @include mq {
+            width: vwt(369);
+            margin-bottom: 0;
+
+        }
+
+        @include mq(lg) {
+            width: px2Rem(369);
+        }
+    }
+
+    &__card-image {
+        overflow: hidden;
+        display: block;
+        border-radius: vw(24);
+
+        @include mq {
+            border-radius: vwt(24);
+        }
+
+        @include mq(lg) {
+            border-radius: px2Rem(24);
+
+
+
+        }
+    }
+
+    &__card-text {
+        color: $color-pale;
+        font-size: vw(18);
+        font-weight: bold;
+        margin-top: vw(8);
+        margin-left: vw(2);
+
+        @include mq {
+            margin-top: vwt(8);
+            margin-left: 0;
+
+            font-size: vwt(19);
+        }
+
+        @include mq(lg) {
+            margin-top: px2Rem(8);
+            font-size: px2Rem(19);
+
+
+
         }
     }
 }

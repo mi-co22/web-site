@@ -15,12 +15,13 @@ $color-contrast: #fff;
 // $color-success: #46C4DB;
 $color-background: #f3f9f6;
 // フォントファミリー
-$font-family: "Noto Sans JP", serif;
+$font-family: "Noto Sans JP", sans-serif;
 // コンテンツ幅の指定
 $sp-full-width: 390; // スマホ用のカンプ幅
 $pc-full-width: 1400; // PC用のカンプ幅
 $pc-content-width: 1200; // PC用のカンプのコンテンツ幅(ガイド線の幅)
-$pc-content-padding: 16; // PC用のカンプのコンテンツ幅 左右の余白
+$pc-container-width: 1168; // PC用のカンプのコンテナ幅 左右の余白
+$pc-content-padding: 16; // PC用のカンプのコンテナ幅 左右の余白
 $pc-subpage-content-width: 832; // PC用のカンプのコンテンツ幅 左右の余白
 
 // ブレイクポイントの指定
@@ -88,6 +89,7 @@ $breakpoints: (
 @mixin l_spacing($spacing) {
     letter-spacing: ($spacing / 1000) + em;
 }
+
 // SPの共通コンテナ幅を呼び出す
 @mixin sp-container($size: 358) {
     width: vw($size);
