@@ -48,6 +48,100 @@
     }
 }
 
+.second-title {
+    font-size: vw(22);
+    font-weight: bold;
+    // display: inline-block;
+    position: relative;
+    padding-bottom: vw(7);
+
+    @include mq {
+        font-size: vwt(28);
+        padding-bottom: vwt(19);
+
+    }
+
+    @include mq(lg) {
+        font-size: px2Rem(28);
+        padding-bottom: px2Rem(19);
+
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(to right, #168352 13.8%, #ddd 0%);
+        height: vw(3);
+
+        @include mq {
+            height: vwt(5);
+            background: linear-gradient(to right, #168352 12.6%, #ddd 0%);
+        }
+
+        @include mq(lg) {
+
+            height: px2Rem(5);
+
+        }
+    }
+
+
+}
+
+.third-title {
+    font-size: vw(20);
+    font-weight: bold;
+    padding-left: vw(19);
+    // border-left: vw(2) solid $color-main;
+    margin: vw(20) 0 vw(17) 0;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        width: vw(2);
+        height: vw(30);
+        background: $color-main;
+        top: vw(4);
+        left: 0;
+
+        @include mq {
+            width: vwt(3);
+            height: vwt(39);
+            top: vwt(2);
+            left: 0;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(3);
+            height: px2Rem(39);
+            top: px2Rem(2);
+
+
+        }
+    }
+
+    @include mq {
+        font-size: vwt(24);
+        padding-left: vwt(19);
+        // border-left: vwt(3) solid $color-main;
+        margin: vwt(31) auto vwt(23) vwt(30);
+    }
+
+    @include mq(lg) {
+        font-size: px2Rem(24);
+        padding-left: px2Rem(19);
+        // border-left: px2Rem(3) solid $color-main;
+        margin: px2Rem(31) auto px2Rem(23) px2Rem(30);
+
+    }
+
+}
+
 .text {
     &__break {
         display: inline-block;
@@ -314,27 +408,33 @@
     }
 }
 
-
-
-
-
-
 .page-header {
-    margin-top: vw(63);
+    margin-top: vw(83);
+
+    @include mq {
+        margin-top: vwt(154);
+        padding: 0 vwt($pc-content-padding);
+
+    }
+
+    @include mq(lg) {
+        margin-top: px2Rem(154);
+        padding: 0 px2Rem($pc-content-padding);
+
+    }
 
     &__container {
-        width: vw(358);
-        margin-inline: auto;
+        @include sp-container();
 
         @include mq {
-            max-width: vwt(1232);
-            padding: 0 vwt($pc-content-padding);
+            max-width: vwt($pc-content-width);
+            // padding: 0 vwt($pc-content-padding);
             // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
-            max-width: px2Rem(1232);
-            padding: 0 px2Rem($pc-content-padding);
+            max-width: px2Rem($pc-content-width);
+            // padding: 0 px2Rem($pc-content-padding);
             // margin: px2Rem(83) auto px2Rem(80);
         }
     }
@@ -368,18 +468,20 @@
         background: $color-contrast;
         font-size: vw(30);
         font-weight: bold;
+        margin-top: vw(18);
 
         @include mq {
             position: absolute;
             bottom: 0;
-
-            padding: vwt(40);
+            margin-top: 0;
+            padding: vwt(23) vwt(37) vwt(27) vwt(41);
             border-radius: 0 vwt(40) 0 0;
             font-size: vwt(36);
         }
 
         @include mq(lg) {
-            padding: px2Rem(40);
+            padding: px2Rem(23) px2Rem(37) px2Rem(27) px2Rem(41);
+
             border-radius: 0 px2Rem(40) 0 0;
             font-size: px2Rem(36);
 
@@ -389,18 +491,39 @@
 }
 
 .breadcrumb {
+    padding-top: vw(10);
+
+    @include mq {
+        // width: vwt(1232);
+        // padding: vwt(14) vwt($pc-content-padding);
+        padding: vwt(14) vwt(7);
+
+    }
+
+    @include mq(lg) {
+        // width: px2Rem(1232);
+        // padding: px2Rem(14) px2Rem($pc-content-padding);
+        padding: px2Rem(14) px2Rem(7);
+
+
+    }
+
+
+
     &__container {
+        @include sp-container(363);
+
 
         @include mq {
-            width: vwt(1232);
-            padding: 0 vwt($pc-content-padding);
-            margin: vwt(83) auto vwt(80);
+            width: vwt(1205);
+            // padding: 0 vwt($pc-content-padding);
+            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
-            width: px2Rem(1232);
-            padding: 0 px2Rem($pc-content-padding);
-            margin: px2Rem(83) auto px2Rem(80);
+            width: px2Rem(1205);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rem(83) auto px2Rem(80);
         }
     }
 
@@ -412,22 +535,33 @@
 
 
     &__separator {
+        width: vw(6);
+        height: vw(12);
+        // margin: 10px 7px 8px 7px;
+        margin: vw(12) vw(7) vw(8) vw(7);
+
+
 
         @include mq {
-            width: vwt(5);
-            height: vwt(10);
+            width: vwt(6);
+            height: vwt(12);
+            margin: vwt(6) vwt(6) vwt(6) vwt(8);
+            padding-top: vwt(3);
+
         }
 
         @include mq(lg) {
-            width: px2Rem(5);
-            height: px2Rem(10);
-
+            width: px2Rem(6);
+            height: px2Rem(12);
+            margin: px2Rem(6) px2Rem(6) px2Rem(6) px2Rem(8);
+            padding-top: px2Rem(3);
         }
     }
 
     &__link,
     &__text {
-        // line-height: 1;
+        font-size: vw(12);
+
 
         @include mq {
             font-size: vwt(12);
@@ -438,6 +572,67 @@
 
         }
     }
+}
+
+.table {
+    width: 100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+
+    @include mq {
+        width: vwt(740);
+        margin-inline: auto;
+    }
+
+    @include mq(lg) {
+        width: px2Rem(740);
+
+    }
+
+    &__row,
+    &__header,
+    &__data {
+        display: block;
+        margin-top: -1px;
+        text-align: left;
+
+        @include mq {
+            display: table-row;
+        }
+    }
+
+    &__header,
+    &__data {
+        border: 1px solid #ccc;
+        padding: vw(4) vw(15) vw(6) vw(19);
+
+        @include mq {
+            display: table-cell;
+            padding: vwt(17) vwt(22);
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(17) px2Rem(22);
+        }
+
+    }
+
+    &__header {
+        background: #f5f5f5;
+        padding: vw(5) vw(19);
+
+        @include mq {
+            padding: vwt(17) vwt(18);
+            width: vwt(200);
+        }
+
+        @include mq(lg) {
+            width: px2Rem(200);
+            padding: px2Rem(17) px2Rem(18);
+
+        }
+    }
+
 }
 
 /* ===========================================
@@ -1291,6 +1486,350 @@
                 box-shadow: 0 px2Rem(2) 0 #066655;
 
             }
+        }
+    }
+}
+
+/** ギャラリー **/
+.gallery {
+    padding: vw(21) 0 vw(33);
+
+    @include mq {
+
+        padding: vwt(32) vwt($pc-content-padding);
+
+    }
+
+    @include mq(lg) {
+        // padding: 0 px2Rem($pc-content-padding);
+        padding: px2Rem(32) px2Rem($pc-content-padding);
+    }
+
+    &__container {
+        @include sp-container();
+
+        @include mq {
+            width: vwt($pc-subpage-content-width);
+            // padding: 0 vwt($pc-content-padding);
+            // margin: vwt(83) auto vwt(80);
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-subpage-content-width);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rsem(83) auto px2Rem(80);
+        }
+    }
+
+    &__slider {
+        margin-top: vw(24);
+
+        @include mq {
+            margin-top: vwt(32);
+
+        }
+
+        @include mq(lg) {
+            margin-top: px2Rem(32);
+
+        }
+    }
+
+    &__image {
+        overflow: hidden;
+        display: block;
+        border-radius: vw(24);
+
+        @include mq {
+            border-radius: vwt(24);
+        }
+
+        @include mq(lg) {
+            border-radius: px2Rem(24);
+
+
+
+        }
+    }
+
+    &__pagination {
+        &.swiper-pagination {
+            bottom: vw(3);
+
+            @include mq {
+                bottom: vwt(15);
+            }
+
+            @include mq(lg) {
+                bottom: px2Rem(15);
+
+
+
+            }
+        }
+    }
+
+    .swiper-pagination-bullet {
+        background: #eee;
+        opacity: 1;
+        margin: 0 vw(3);
+
+        @include mq {
+            margin: 0 vwt(4);
+
+        }
+
+        @include mq(lg) {
+            margin: 0 px2Rem(4);
+
+
+
+
+        }
+    }
+
+    .swiper-pagination-bullet-active {
+        background: $color-main;
+    }
+}
+
+/** 特長 **/
+.advantage {
+    padding-top: vw(21);
+
+    @include mq {
+
+        padding: vwt(27) vwt($pc-content-padding) 0;
+
+    }
+
+    @include mq(lg) {
+        // padding: 0 px2Rem($pc-content-padding);
+        padding: px2Rem(27) px2Rem($pc-content-padding) 0;
+    }
+
+    &__container {
+        @include sp-container();
+
+
+        @include mq {
+            width: vwt($pc-subpage-content-width);
+            // padding: 0 vwt($pc-content-padding);
+            // margin: vwt(83) auto vwt(80);
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-subpage-content-width);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rsem(83) auto px2Rem(80);
+        }
+    }
+
+    &__card-lists {
+        margin-top: vw(23);
+
+        @include mq {
+            display: flex;
+            flex-wrap: wrap;
+            gap: vwt(31);
+            margin-top: vwt(32);
+        }
+
+        @include mq(lg) {
+            gap: px2Rem(31);
+            margin-top: px2Rem(32);
+
+
+        }
+
+    }
+
+    &__card {
+        margin-bottom: vw(35);
+
+        @include mq {
+            width: vwt(246);
+            margin-bottom: 0;
+        }
+
+        @include mq(lg) {
+            width: px2Rem(246);
+        }
+    }
+
+    &__card-image {
+        overflow: hidden;
+        display: block;
+        border-radius: vw(16);
+
+        @include mq {
+            border-radius: vwt(16);
+        }
+
+        @include mq(lg) {
+            border-radius: px2Rem(16);
+
+
+
+        }
+    }
+
+    &__card-text {
+
+        font-size: vw(18);
+        font-weight: bold;
+        margin-top: vw(7);
+        line-break: anywhere;
+
+        @include mq {
+            font-size: vwt(18);
+            margin-top: vwt(7);
+        }
+
+        @include mq(lg) {
+            font-size: px2Rem(18);
+            margin-top: px2Rem(7);
+
+
+
+        }
+    }
+}
+
+/** 小売価格 **/
+.price {
+    padding: vw(14) 0;
+
+    @include mq {
+        padding: vwt(52) vwt($pc-content-padding) vwt(24);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(52) px2Rem($pc-content-padding) px2Rem(24);
+    }
+
+    &__container {
+        @include sp-container();
+
+        @include mq {
+            width: vwt($pc-subpage-content-width);
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-subpage-content-width);
+            // padding: 0 px2Rem($pc-content-padding);
+            // margin: px2Rsem(83) auto px2Rem(80);
+        }
+    }
+
+    &__attention {
+        font-family: "Montserrat", serif;
+        font-weight: 700;
+        font-size: vw(32);
+        margin-top: vw(8);
+        display: inline-block;
+
+
+        @include mq {
+            margin-top: vwt(17);
+
+            font-size: vwt(32);
+
+        }
+
+        @include mq(lg) {
+            margin-top: px2Rem(17);
+
+            font-size: px2Rem(32);
+
+        }
+    }
+}
+
+/** スペック **/
+.specs {
+    padding: vw(30) 0 vw(63);
+
+    @include mq {
+        padding: vwt(24) vwt($pc-content-padding) vwt(70);
+    }
+
+    @include mq(lg) {
+        padding: px2Rem(24) px2Rem($pc-content-padding) px2Rem(70);
+    }
+
+    &__container {
+        @include sp-container();
+
+        @include mq {
+            width: vwt($pc-subpage-content-width);
+        }
+
+        @include mq(lg) {
+            width: px2Rem($pc-subpage-content-width);
+        }
+    }
+}
+
+/** お問い合わせ **/
+.contact {
+    background: url(/assets/image/contact_sp.jpg) center center / cover no-repeat;
+
+    @include mq {
+        background: url(/assets/image/contact_pc.jpg) center center / cover no-repeat;
+    }
+
+    @include mq(lg) {}
+
+    &__button-wrapper {
+        text-align: center;
+        padding: vw(140) vw(16);
+
+
+        @include mq {
+
+            padding: vwt(185) vwt(16);
+
+
+        }
+
+        @include mq(lg) {
+            padding: px2Rem(185) px2Rem(16);
+
+
+
+        }
+    }
+
+    &__button {
+        min-width: vw(358);
+        font-size: vw(20);
+        padding: vw(21);
+        border: vw(2) solid $color-contrast;
+
+        @include mq {
+            min-width: vwt(358);
+            font-size: vwt(20);
+            padding: vwt(20);
+            border: vwt(2) solid $color-contrast;
+
+        }
+
+        @include mq(lg) {
+            min-width: px2Rem(358);
+            font-size: px2Rem(20);
+            padding: px2Rem(20);
+            border: px2Rem(2) solid $color-contrast;
+
+        }
+
+        &:hover {
+            @include mq {
+                color: $color-main;
+                background: $color-contrast;
+            }
+
+            @include mq(lg) {}
         }
     }
 }

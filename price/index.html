@@ -67,7 +67,7 @@
                         <a href="/" class="breadcrumb__link">トップ</a>
                     </li>
                     <li class="breadcrumb__separator">
-                        <img src="/assets/image/breadcrumb.svg" alt="›">
+                        <img src="/assets/image/breadcrumb.png" alt="">
                     </li>
                     <li class="breadcrumb__item" aria-current="page">
                         <span class="breadcrumb__text">価格・スペック</span>
@@ -77,7 +77,145 @@
 
         </nav>
         <main>
+            <!-- ギャラリー-->
+            <section class="gallery">
+                <div class="gallery__container">
+                    <h2 class="second-title">ギャラリー
+                    </h2>
+                    <!-- <div class="slider__wrapper"> -->
+                    <div class="gallery__slider">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide gallery__item">
+                                    <picture class="gallery__image">
+                                        <source media="(min-width: 768px)" srcset="/assets/image/gallery_01_pc.jpg" type="image/jpg">
+                                        <img src="/assets/image/gallery_01_sp.jpg" alt="" width="800" height="500">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <picture class="gallery__image">
+                                        <source media="(min-width: 768px)" srcset="/assets/image/gallery_02_pc.jpg" type="image/jpg">
+                                        <img src="/assets/image/gallery_02_sp.jpg" alt="" width="800" height="500">
+                                    </picture>
+                                </div>
+                                <div class="swiper-slide gallery__item">
+                                    <picture class="gallery__image">
+                                        <source media="(min-width: 768px)" srcset="/assets/image/gallery_03_pc.jpg" type="image/jpg">
+                                        <img src="/assets/image/gallery_03_sp.jpg" alt="" width="800" height="500">
+                                    </picture>
+                                </div>
 
+                            </div>
+                            <div class="gallery__pagination swiper-pagination"></div>
+
+                        </div>
+                    </div>
+                    <!-- </div> -->
+                </div>
+            </section>
+            <!-- 特長 -->
+            <section class="advantage">
+                <div class="advantage__container">
+                    <h2 class="second-title">特長
+                    </h2>
+                    <ul class="advantage__card-lists">
+
+                        <li class="advantage__card">
+                            <picture class="advantage__card-image">
+                                <source media="(min-width: 768px)" srcset="/assets/image/advantage_01_pc.jpg" type="image/jpg">
+                                <img src="/assets/image/advantage_01_sp.jpg" alt="" width="246" height="150">
+                            </picture>
+                            <div class="advantage__card-body">
+                                <p class="advantage__card-text">自動操縦が可能で、短時間で大量の農作物を監視、収穫、播種、散布などの作業ができます。</p>
+                            </div>
+                        </li>
+
+                        <li class="advantage__card">
+                            <picture class="advantage__card-image">
+
+                                <source media="(min-width: 768px)" srcset="/assets/image/advantage_02_pc.jpg" type="image/jpg">
+                                <img src="/assets/image/advantage_02_sp.jpg" alt="" width="246" height="150">
+                            </picture>
+                            <div class="advantage__card-body">
+                                <p class="advantage__card-text">高精度のカメラやセンサーを搭載しており、正確な土壌・作物の情報を収集でき、水や肥料などの資源を適切に配分できます。</p>
+                            </div>
+                        </li>
+                        <li class="advantage__card">
+                            <picture class="advantage__card-image">
+
+                                <source media="(min-width: 768px)" srcset="/assets/image/advantage_03_pc.jpg" type="image/jpg">
+                                <img src="/assets/image/advantage_03_sp.jpg" alt="" width="246" height="150">
+                            </picture>
+                            <div class="advantage__card-body">
+                                <p class="advantage__card-text">必要な場所にだけ肥料や農薬を散布することができます。これにより、農薬や肥料の過剰使用が抑えられ、環境負荷やコスト削減に繋がります。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- 小売価格 -->
+            <section class="price">
+                <div class="price__container">
+                    <h2 class="second-title">メーカー希望小売価格
+                    </h2>
+                    <p class="price__text">
+                        <span class="price__attention">¥550,000</span>（税込）
+                    </p>
+                </div>
+            </section>
+            <!-- スペック -->
+            <section class="specs">
+                <div class="specs__container">
+                    <h2 class="second-title">スペック
+                    </h2>
+                    <p class="third-title">
+                        機体
+                    </p>
+                    <table class="table">
+                        <tbody>
+                            <tr class="table__row">
+                                <th class="table__header">ドローン名</th>
+                                <td class="table__data">アグリ・ファルコン</td>
+
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">製品番号</th>
+                                <td class="table__data">AGF-100</td>
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">飛行時間</th>
+                                <td class="table__data">60 分</td>
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">最大積載量</th>
+                                <td class="table__data">5 kg</td>
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">操作距離</th>
+                                <td class="table__data">3 km</td>
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">機体重量</th>
+                                <td class="table__data">8 kg</td>
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">機体寸法</th>
+                                <td class="table__data">150 x 150 x 40 cm</td>
+                            </tr>
+                            <tr class="table__row">
+                                <th class="table__header">機能・特徴</th>
+                                <td class="table__data">自動操縦、植物生育モニタリング、農薬散布</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <!-- お問い合わせ -->
+            <div class="contact">
+                <div class="contact__button-wrapper">
+                    <a href="#" class="button contact__button">お問い合わせ</a>
+                </div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
