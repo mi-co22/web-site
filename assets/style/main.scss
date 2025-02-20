@@ -208,8 +208,20 @@
     &__data {
         display: flex;
         align-items: center;
-
         flex-wrap: wrap;
+        margin-bottom: vw(9);
+
+        @include mq {
+            margin-bottom: 0;
+        }
+
+        &--fix {
+            margin-bottom: vw(11);
+
+            @include mq {
+                margin-bottom: 0;
+            }
+        }
     }
 
 
@@ -633,46 +645,61 @@
 .footer {
     background: $color-main;
     color: $color-contrast;
+    padding: vw(23);
+
+    @include mq {
+        padding: vwt(35) vwt($pc-content-padding);
+
+    }
+
+    @include mq(lg) {
+
+        padding: px2Rem(35) px2Rem($pc-content-padding);
+    }
 
     &__container {
         margin-inline: auto;
 
         @include mq {
-            width: vwt($pc-container-width);
-            padding: vwt(40) vwt($pc-content-padding);
+            // width: vwt($pc-container-width);
         }
 
         @include mq(lg) {
-            width: px2Rem($pc-container-width);
-            padding: px2Rem(40) px2Rem($pc-content-padding);
+            // width: px2Rem($pc-container-width);
         }
     }
 }
 
 .footer-menu {
+    font-size: vw(13);
 
     display: flex;
     justify-content: center;
 
     @include mq {
-        font-size: vwt(14);
+        font-size: vwt(15);
+        transform: translateX(vw(5));
     }
 
     @include mq(lg) {
-        font-size: px2Rem(14);
+        font-size: px2Rem(15);
+        transform: translateX(px2Rem(5));
+
     }
 
     &__item {
+        padding: vw(1) vw(16);
+
         &--line {
             border-right: 1px solid $color-contrast;
         }
 
         @include mq {
-            padding: vwt(5) vwt(10);
+            padding: vwt(1) vwt(20);
         }
 
         @include mq(lg) {
-            padding: px2Rem(5) px2Rem(10);
+            padding: px2Rem(1) px2Rem(20);
 
 
         }
@@ -1117,6 +1144,16 @@
         }
     }
 
+    &__card-link {
+        &:hover {
+            opacity: 0.5;
+        }
+
+        @include mq {}
+
+        @include mq(lg) {}
+    }
+
     &__card-image {
         overflow: hidden;
         display: block;
@@ -1157,14 +1194,14 @@
 
 /** お知らせ **/
 .news {
-    padding: vw(52) 0 vw(51);
+    padding: vw(52) 0 vw(61);
 
     @include mq {
-        padding: vwt(57) vwt($pc-content-padding) vwt(80);
+        padding: vwt(57) vwt($pc-content-padding) vwt(70);
     }
 
     @include mq(lg) {
-        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(80);
+        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(70);
     }
 
     &__container {
@@ -1201,28 +1238,38 @@
 
     &__button-wrapper {
         text-align: center;
+        margin-top: vw(24);
+        width: vw(300);
+        margin-inline: auto;
 
         @include mq {
+            width: auto;
 
-            margin-top: vwt(32);
+            margin-top: vwt(30);
         }
 
         @include mq(lg) {
 
-            margin-top: px2Rem(32);
+            margin-top: px2Rem(30);
 
         }
     }
 
     &__button {
         background: $color-pale;
+        padding: vw(19);
+        width: 100%;
+        letter-spacing: 0.13em;
+        box-shadow: 0 vw(5) 0 #066655;
 
         @include mq {
+            width: auto;
+
             min-width: vwt(300);
             font-size: vwt(18);
             padding: vwt(17);
             box-shadow: 0 vwt(5) 0 #066655;
-            /* 影の太さ・色 */
+            letter-spacing: normal;
         }
 
         @include mq(lg) {
