@@ -426,11 +426,13 @@ img {
 @media screen and (min-width: 768px) {
   .page-header__body {
     border-radius: 2vw;
+    border-bottom-left-radius: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .page-header__body {
     border-radius: 1.5rem;
+    border-bottom-left-radius: 0;
   }
 }
 .page-header__image {
@@ -482,12 +484,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .breadcrumb {
-    padding: 1.1666666667vw 0.5833333333vw;
+    padding: 1.1666666667vw 1.3333333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .breadcrumb {
-    padding: 0.875rem 0.4375rem;
+    padding: 0.875rem 1rem;
   }
 }
 .breadcrumb__container {
@@ -496,12 +498,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .breadcrumb__container {
-    width: 100.4166666667vw;
+    max-width: 100vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .breadcrumb__container {
-    width: 75.3125rem;
+    max-width: 75rem;
   }
 }
 .breadcrumb__list {
@@ -587,7 +589,6 @@ img {
 }
 .table__header {
   background: #f5f5f5;
-  padding: 1.2820512821vw 4.8717948718vw;
 }
 @media screen and (min-width: 768px) {
   .table__header {
@@ -608,19 +609,16 @@ img {
   border-radius: 4.1025641026vw;
   margin-bottom: 4.8717948718vw;
 }
-.accordion__item:not(:first-child) {
-  margin-top: 1px;
-}
 @media screen and (min-width: 768px) {
   .accordion__item {
     border-radius: 1.3333333333vw;
-    margin-bottom: 2vw;
+    margin-bottom: 2.0833333333vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .accordion__item {
     border-radius: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.5625rem;
   }
 }
 .accordion__item.accordion__item--expanded {
@@ -777,12 +775,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .accordion__answer {
-    padding: 0 2.1666666667vw 1.6666666667vw 2vw;
+    padding: 0.0833333333vw 2.6666666667vw 1.5vw 2.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .accordion__answer {
-    padding: 0 1.625rem 1.25rem 1.5rem;
+    padding: 0.0625rem 2rem 1.125rem 2rem;
   }
 }
 .accordion__a-icon {
@@ -851,7 +849,7 @@ img {
     margin: 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .accordion__action {
     width: 1.25rem;
     height: 1.25rem;
@@ -876,7 +874,7 @@ img {
     height: 0.25vw;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
   .accordion__action::before, .accordion__action::after {
     width: 1.25rem;
     height: 0.1875rem;
@@ -1879,11 +1877,13 @@ img {
   font-weight: bold;
   margin-top: 1.7948717949vw;
   line-break: anywhere;
+  padding-right: 0.5128205128vw;
 }
 @media screen and (min-width: 768px) {
   .advantage__card-text {
     font-size: 1.5vw;
     margin-top: 0.5833333333vw;
+    padding-right: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -2027,12 +2027,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .faq {
-    padding: 3.5833333333vw 1.3333333333vw 5.8333333333vw;
+    padding: 3.5833333333vw 1.3333333333vw 4.1666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq {
-    padding: 2.6875rem 1rem 4.375rem;
+    padding: 2.6875rem 1rem 3.125rem;
   }
 }
 .faq__container {
