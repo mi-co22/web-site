@@ -24,8 +24,8 @@
     <body>
         <header class="header">
             <div class="header__container">
-                <div class="header__logo">
-                    <a href="/"><img src="/assets/image/logo.svg" alt="Kirameki Farm" width="197" height="23"></a>
+                <div class="header__logo-wrapper">
+                    <a href="/" class="header__logo"><img src="/assets/image/logo.svg" alt="Kirameki Farm" width="197" height="23"></a>
                 </div>
                 <button id="hamburger" class="hamburger" aria-label="メニューを開く" aria-controls="gnav" aria-expanded="false">
                     <span class="hamburger__line" aria-hidden="true"></span>
@@ -87,19 +87,19 @@
                                 <div class="swiper-slide gallery__item">
                                     <picture class="gallery__image">
                                         <source media="(min-width: 768px)" srcset="/assets/image/gallery_01_pc.jpg" type="image/jpg">
-                                        <img src="/assets/image/gallery_01_sp.jpg" alt="" width="800" height="500">
+                                        <img src="/assets/image/gallery_01_sp.jpg" alt="アグリ・ファルコン 全体画像" width="800" height="500">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide gallery__item">
                                     <picture class="gallery__image">
                                         <source media="(min-width: 768px)" srcset="/assets/image/gallery_02_pc.jpg" type="image/jpg">
-                                        <img src="/assets/image/gallery_02_sp.jpg" alt="" width="800" height="500">
+                                        <img src="/assets/image/gallery_02_sp.jpg" alt="アグリ・ファルコン 飛行している様子" width="800" height="500">
                                     </picture>
                                 </div>
                                 <div class="swiper-slide gallery__item">
                                     <picture class="gallery__image">
                                         <source media="(min-width: 768px)" srcset="/assets/image/gallery_03_pc.jpg" type="image/jpg">
-                                        <img src="/assets/image/gallery_03_sp.jpg" alt="" width="800" height="500">
+                                        <img src="/assets/image/gallery_03_sp.jpg" alt="アグリ・ファルコン 飛行している様子の拡大画像" width="800" height="500">
                                     </picture>
                                 </div>
                             </div>
@@ -205,14 +205,14 @@
             <!-- お問い合わせ -->
             <div class="contact">
                 <div class="contact__button-wrapper">
-                    <a href="#" class="button contact__button">お問い合わせ</a>
+                    <a href="/contact" class="button contact__button">お問い合わせ</a>
                 </div>
             </div>
         </main>
         <footer class="footer">
             <div class="footer__container">
                 <ul class="footer-menu">
-                    <li><a href="/price" class="footer-menu__item footer-menu__item--line">価格・スペック</a></li>
+                    <li class="footer-menu__item-line"><a href="/price" class="footer-menu__item">価格・スペック</a></li>
                     <li><a href="/faq" class="footer-menu__item">よくあるご質問</a></li>
                 </ul>
             </div>

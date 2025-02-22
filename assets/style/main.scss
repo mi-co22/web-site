@@ -959,27 +959,27 @@
         @include mq {
             max-width: vwt($pc-container-width);
             margin-inline: auto;
-            padding: 0 0 0 vwt($pc-content-padding);
         }
 
         @include mq(lg) {
             max-width: px2Rem(1200);
-            padding: 0 0 0 px2Rem($pc-content-padding);
         }
     }
 
     &__logo {
         flex-shrink: 0;
-        margin-left: vw(16);
-        width: vw(197);
+        padding: vw(16);
+        width: vw(229);
+        display: block;
 
         @include mq {
-            width: vwt(263);
-            margin-left: 0;
+            width: vwt(295);
+            padding: vwt(16);
         }
 
         @include mq(lg) {
-            width: px2Rem(263);
+            width: px2Rem(295);
+            padding: px2Rem(16);
         }
     }
 }
@@ -1134,16 +1134,14 @@
 .footer {
     background: $color-main;
     color: $color-contrast;
-    padding: vw(23);
+    padding: vw(21) vw(23) vw(24);
 
     @include mq {
-        padding: vwt(35) vwt($pc-content-padding);
-
+        padding: vwt(36) vwt($pc-content-padding);
     }
 
     @include mq(lg) {
-
-        padding: px2Rem(35) px2Rem($pc-content-padding);
+        padding: px2Rem(36) px2Rem($pc-content-padding);
     }
 
     &__container {
@@ -1166,19 +1164,40 @@
         transform: translateX(px2Rem(5));
     }
 
-    &__item {
-        padding: vw(1) vw(16);
+    &__item-line {
+        position: relative;
 
-        &--line {
-            border-right: 1px solid $color-contrast;
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 1px;
+            background: $color-contrast;
+            height: vw(20);
+            right: 0;
+            top: vw(3);
+            z-index: 100;
+
+            @include mq {
+                height: 75%;
+                top: vwt(5);
+            }
+
+            @include mq(lg) {
+                top: px2Rem(5);
+            }
         }
+    }
+
+    &__item {
+        padding: vw(5) vw(16);
 
         @include mq {
-            padding: vwt(1) vwt(20);
+            padding: vwt(5) vwt(20);
         }
 
         @include mq(lg) {
-            padding: px2Rem(1) px2Rem(20);
+            padding: px2Rem(5) px2Rem(20);
         }
     }
 }
@@ -1740,7 +1759,7 @@
 
 /** ギャラリー **/
 .gallery {
-    padding: vw(21) 0 vw(33);
+    padding: vw(22) 0 vw(33);
 
     @include mq {
         padding: vwt(32) vwt($pc-content-padding);
@@ -1818,6 +1837,19 @@
 
     .swiper-pagination-bullet-active {
         background: $color-main;
+    }
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 vw(3);
+
+    @include mq {
+        margin: 0 vwt(3);
+    }
+
+    @include mq(lg) {
+        margin: 0 px2Rem(3);
     }
 }
 
