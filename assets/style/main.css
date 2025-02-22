@@ -733,6 +733,11 @@ img {
   display: block;
   flex: 1;
 }
+@media screen and (min-width: 768px) {
+  .accordion__content {
+    font-size: 2vw;
+  }
+}
 @media screen and (min-width: 1200px) {
   .accordion__content {
     font-size: 1.5rem;
@@ -1182,6 +1187,7 @@ img {
 .footer__container {
   margin-inline: auto;
 }
+
 .footer-menu {
   font-size: 3.3333333333vw;
   display: flex;

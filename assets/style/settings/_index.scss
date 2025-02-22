@@ -11,8 +11,6 @@ $color-pale: #09947b;
 $color-line: #ddd;
 $color-main: #168352;
 $color-contrast: #fff;
-// $color-attention: #5DD5AB;
-// $color-success: #46C4DB;
 $color-background: #f3f9f6;
 // フォントファミリー
 $font-family: "Noto Sans JP", sans-serif;
@@ -108,7 +106,7 @@ html {
 body {
     color: $color-normal;
     font-family: $font-family;
-    line-height: 1.75; //PPで確認
+    line-height: 1.75;
     font-size: vw(16);
 
     @include mq {

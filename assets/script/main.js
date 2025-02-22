@@ -69,7 +69,7 @@ $(function () {
     //-----------------------------------------------------
     $('[aria-controls^="accordion"]').stop().on('click', function (e) {
         const $self = $(e.currentTarget);
-        const $item = $self.closest('.accordion__item'); // 一番近い .accordion__item を取得
+        const $item = $self.closest('.accordion__item');
         const expanded = $self.attr('aria-expanded') === 'true';
         const $target = $('#' + $self.attr('aria-controls'));
 
@@ -78,14 +78,14 @@ $(function () {
                 'aria-expanded': true,
                 'aria-label': '回答パネルを閉じる'
             });
-            $item.addClass('accordion__item--expanded'); // .accordion__item にクラスを追加
+            $item.addClass('accordion__item--expanded');
             $target.attr('aria-hidden', false).slideDown();
         } else {
             $self.attr({
                 'aria-expanded': false,
                 'aria-label': '回答パネルを開く'
             });
-            $item.removeClass('accordion__item--expanded'); // .accordion__item からクラスを削除
+            $item.removeClass('accordion__item--expanded');
             $target.attr('aria-hidden', true).slideUp();
         }
     });

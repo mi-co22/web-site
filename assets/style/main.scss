@@ -7,22 +7,15 @@
  * ======================================== */
 .title {
     font-size: vw(20);
-    //         font-family: "EB Garamond", serif;
     font-weight: bold;
-    //         margin-bottom: vw(16);
-    //         line-height: 1.2;
     text-align: center;
 
     @include mq {
         font-size: vwt(28);
-        //             margin-bottom: vwt(20);
-        //             @include lineheight(38, 54);
-        //             text-align: left;
     }
 
     @include mq(lg) {
         font-size: px2Rem(28);
-        //             margin-bottom: px2Rem(20);
     }
 
     &--sub {
@@ -51,7 +44,6 @@
 .second-title {
     font-size: vw(22);
     font-weight: bold;
-    // display: inline-block;
     position: relative;
     padding-bottom: vw(7);
 
@@ -82,9 +74,7 @@
         }
 
         @include mq(lg) {
-
             height: px2Rem(5);
-
         }
     }
 
@@ -95,7 +85,6 @@
     font-size: vw(20);
     font-weight: bold;
     padding-left: vw(19);
-    // border-left: vw(2) solid $color-main;
     margin: vw(20) 0 vw(17) 0;
     position: relative;
 
@@ -120,24 +109,19 @@
             width: px2Rem(3);
             height: px2Rem(39);
             top: px2Rem(2);
-
-
         }
     }
 
     @include mq {
         font-size: vwt(24);
         padding-left: vwt(19);
-        // border-left: vwt(3) solid $color-main;
         margin: vwt(31) auto vwt(23) vwt(30);
     }
 
     @include mq(lg) {
         font-size: px2Rem(24);
         padding-left: px2Rem(19);
-        // border-left: px2Rem(3) solid $color-main;
         margin: px2Rem(31) auto px2Rem(23) px2Rem(30);
-
     }
 
 }
@@ -185,16 +169,11 @@
 
     &--3 {
         @include mq {
-
             padding: vwt(19) vwt(25) vwt(21);
-
         }
 
         @include mq(lg) {
             padding: px2Rem(19) px2Rem(25) px2Rem(21);
-
-
-
         }
     }
 
@@ -206,7 +185,6 @@
         @include mq {
             width: vwt(133);
             margin-right: vwt(29);
-
         }
 
         @include mq(lg) {
@@ -218,17 +196,11 @@
             @include mq {
                 width: vwt(110);
                 margin-right: vwt(19);
-
-
             }
 
             @include mq(lg) {
                 width: px2Rem(110);
                 margin-right: px2Rem(19);
-
-
-
-
             }
         }
     }
@@ -241,16 +213,10 @@
         &--3 {
             @include mq {
                 font-size: vwt(20);
-
-
             }
 
             @include mq(lg) {
                 font-size: px2Rem(20);
-
-
-
-
             }
         }
     }
@@ -258,47 +224,36 @@
 
 .news-list {
     border-top: 1px solid $color-line;
-    // line-height: 1.5;
 
     &__date {
         flex-shrink: 0;
-        // width: vw(92);
         font-size: vw(15);
-
         font-weight: 400;
         padding: vw(16) 0 vw(8);
 
         @include mq {
             font-size: vwt(14);
-            // width: vwt(89);
             padding: 0;
         }
 
         @include mq(lg) {
             font-size: px2Rem(14);
-            // width: px2Rem(89);
-
         }
     }
 
     &__time {
         display: inline-block;
-        // vertical-align: middle;
         width: vw(89);
 
         @include mq {
-
             width: vwt(86);
-
         }
 
         @include mq(lg) {
             width: px2Rem(86);
-
         }
     }
 
-    // @include mq {
     &__data {
         display: flex;
         align-items: center;
@@ -318,11 +273,6 @@
         }
     }
 
-
-
-
-    // }
-
     &__item {
         display: flex;
         flex-wrap: wrap;
@@ -336,7 +286,6 @@
 
         @include mq(lg) {
             padding: px2Rem(15) 0 px2Rem(17);
-
         }
     }
 
@@ -349,7 +298,6 @@
 
         @include mq {
             display: inline-block;
-
             font-size: vwt(15);
             margin-left: vwt(24);
         }
@@ -357,7 +305,6 @@
         @include mq(lg) {
             font-size: px2Rem(15);
             margin-left: px2Rem(24);
-
         }
     }
 
@@ -372,7 +319,6 @@
     font-size: vw(13);
     border-radius: vw(4);
     padding: vw(6);
-
     height: vw(28);
     display: inline-block;
     min-width: vw(134);
@@ -414,13 +360,11 @@
     @include mq {
         margin-top: vwt(154);
         padding: 0 vwt($pc-content-padding);
-
     }
 
     @include mq(lg) {
         margin-top: px2Rem(154);
         padding: 0 px2Rem($pc-content-padding);
-
     }
 
     &__container {
@@ -428,19 +372,14 @@
 
         @include mq {
             max-width: vwt($pc-content-width);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             max-width: px2Rem($pc-content-width);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rem(83) auto px2Rem(80);
         }
     }
 
     &__body {
-        // border-radius: vw(24);
         overflow: hidden;
         position: relative;
 
@@ -482,11 +421,8 @@
 
         @include mq(lg) {
             padding: px2Rem(23) px2Rem(37) px2Rem(27) px2Rem(41);
-
             border-radius: 0 px2Rem(40) 0 0;
             font-size: px2Rem(36);
-
-
         }
 
         &--faq {
@@ -505,14 +441,11 @@
     padding-top: vw(9);
 
     @include mq {
-        // width: vwt(1232);
-
         padding: vwt(14) vwt($pc-content-padding);
 
     }
 
     @include mq(lg) {
-        // width: px2Rem(1232);
         padding: px2Rem(14) px2Rem($pc-content-padding);
 
 
@@ -521,13 +454,11 @@
     &__container {
         @include sp-container(361);
 
-
         @include mq {
             max-width: vwt(1202);
         }
 
         @include mq(lg) {
-
             max-width: px2Rem(1202);
         }
     }
@@ -542,17 +473,13 @@
     &__separator {
         width: vw(6);
         height: vw(12);
-        // margin: 10px 7px 8px 7px;
         margin: vw(12) vw(7) vw(8) vw(7);
-
-
 
         @include mq {
             width: vwt(6);
             height: vwt(12);
             margin: vwt(6) vwt(6) vwt(6) vwt(8);
             padding-top: vwt(3);
-
         }
 
         @include mq(lg) {
@@ -567,14 +494,12 @@
     &__text {
         font-size: vw(12);
 
-
         @include mq {
             font-size: vwt(12);
         }
 
         @include mq(lg) {
             font-size: px2Rem(12);
-
         }
     }
 }
@@ -591,7 +516,6 @@
 
     @include mq(lg) {
         width: px2Rem(740);
-
     }
 
     &__row,
@@ -624,7 +548,6 @@
 
     &__header {
         background: #f5f5f5;
-        // padding: vw(4) vw(19) vw(6);
 
         @include mq {
             padding: vwt(17) vwt(18);
@@ -634,22 +557,12 @@
         @include mq(lg) {
             width: px2Rem(200);
             padding: px2Rem(17) px2Rem(18);
-
         }
     }
 
 }
 
 .accordion {
-
-
-    @include mq {
-        // width: vwt(800);
-    }
-
-    @include mq(lg) {
-        // width: px2Rem(800);
-    }
 
     &__item {
         border: 1px solid #ccc;
@@ -670,10 +583,8 @@
         &.accordion__item--expanded {
             margin-bottom: vw(24);
 
-
             @include mq {
                 margin-bottom: vwt(24);
-
             }
 
             @include mq(lg) {
@@ -684,7 +595,6 @@
 
                 @include mq {
                     margin-bottom: vwt(25);
-
                 }
 
                 @include mq(lg) {
@@ -694,7 +604,6 @@
         }
 
         &--margin-bottom-type1 {
-
             @include mq {
                 margin-bottom: vwt(26);
 
@@ -726,15 +635,11 @@
         cursor: pointer;
 
         @include mq {
-            // align-items: center;
             padding: vwt(16) vwt(31) vwt(18) vwt(32);
         }
 
         @include mq(lg) {
             padding: px2Rem(16) px2Rem(31) px2Rem(18) px2Rem(32);
-
-
-
         }
 
         &--padding-bottom-type1 {
@@ -742,7 +647,6 @@
 
             @include mq {
                 padding-bottom: vwt(18);
-
             }
 
             @include mq(lg) {
@@ -775,13 +679,11 @@
         @include mq {
             font-size: vwt(24);
             margin: vwt(3) vwt(14) 0 0;
-
         }
 
         @include mq(lg) {
             font-size: px2Rem(24);
             margin: px2Rem(3) px2Rem(14) 0 0;
-
         }
     }
 
@@ -790,14 +692,12 @@
         flex: 1;
 
         @include mq {
-            // margin-top: vwt(-2);
+            font-size: vwt(24);
+
         }
 
         @include mq(lg) {
             font-size: px2Rem(24);
-            // margin-top: px2Rem(-2);
-
-
         }
     }
 
@@ -806,15 +706,11 @@
         display: block;
 
         @include mq {
-
             height: vwt(24);
-            // margin-top: vwt(-3);
         }
 
         @include mq(lg) {
-
             height: px2Rem(24);
-            // margin-top: px2Rem(-3);
         }
     }
 
@@ -825,8 +721,6 @@
         font-size: vw(11);
         text-align: center;
         padding: vw(5) vw(10) vw(6);
-        // padding: vw(6) vw(10);
-
         border-radius: vw(3);
         margin-right: vw(4);
         min-width: vw(100);
@@ -845,18 +739,14 @@
             margin-right: px2Rem(2);
             font-size: px2Rem(11);
             padding: px2Rem(5) px2Rem(11) px2Rem(6);
-
             border-radius: px2Rem(4);
-
         }
     }
 
     &__q-text {
         display: block;
         font-size: vw(16);
-        // flex-grow: 1;
         margin-right: vw(12);
-        // @include lineheight(15, 28);
         line-break: anywhere;
 
         @include mq {
@@ -868,7 +758,6 @@
         @include mq(lg) {
             font-size: px2Rem(18);
             margin: px2Rem(15) 0 0 0;
-
         }
     }
 
@@ -877,7 +766,6 @@
         display: flex;
         padding: vw(2) vw(22) vw(17) vw(26);
         line-break: anywhere;
-
 
         @include mq {
             padding: vwt(1) vwt(32) vwt(18) vwt(32);
@@ -907,13 +795,11 @@
             @include mq {
                 padding-top: vwt(1);
                 padding-bottom: vwt(18);
-
             }
 
             @include mq(lg) {
                 padding-top: px2Rem(1);
                 padding-bottom: px2Rem(18);
-
             }
         }
 
@@ -922,7 +808,6 @@
 
             @include mq {
                 padding-bottom: vwt(18);
-
             }
 
             @include mq(lg) {
@@ -946,13 +831,11 @@
         @include mq {
             font-size: vwt(18);
             margin-top: vwt(5);
-
         }
 
         @include mq(lg) {
             font-size: px2Rem(18);
             margin-top: px2Rem(5);
-
         }
     }
 
@@ -990,7 +873,6 @@
 
         @include mq {
             margin-top: 0;
-
         }
     }
 
@@ -1007,14 +889,12 @@
             height: vwt(20);
             top: vwt(9);
             margin: 0;
-
         }
 
         @include mq(lg) {
             width: px2Rem(20);
             height: px2Rem(20);
             top: px2Rem(9);
-
         }
 
         &::before,
@@ -1031,7 +911,6 @@
             transition: all .3s;
 
             @include mq {
-
                 width: vwt(20);
                 height: vwt(3);
             }
@@ -1050,7 +929,6 @@
             }
         }
     }
-
 }
 
 /* ===========================================
@@ -1161,10 +1039,7 @@
                 transform: rotate(-45deg);
             }
         }
-
-
     }
-
 }
 
 /* ===========================================
@@ -1229,7 +1104,6 @@
             padding: vwt(20) vwt(15);
             margin-bottom: 0;
             font-size: vwt(16);
-            // @include lineheight(20, 36);
         }
 
         @include mq(lg) {
@@ -1274,20 +1148,11 @@
 
     &__container {
         margin-inline: auto;
-
-        @include mq {
-            // width: vwt($pc-container-width);
-        }
-
-        @include mq(lg) {
-            // width: px2Rem($pc-container-width);
-        }
     }
 }
 
 .footer-menu {
     font-size: vw(13);
-
     display: flex;
     justify-content: center;
 
@@ -1299,7 +1164,6 @@
     @include mq(lg) {
         font-size: px2Rem(15);
         transform: translateX(px2Rem(5));
-
     }
 
     &__item {
@@ -1315,8 +1179,6 @@
 
         @include mq(lg) {
             padding: px2Rem(1) px2Rem(20);
-
-
         }
     }
 }
@@ -1336,7 +1198,6 @@
     @include mq(lg) {
         margin-top: px2Rem(151);
         padding: 0 px2Rem($pc-content-padding);
-
     }
 
     &__container {
@@ -1344,12 +1205,10 @@
 
         @include mq {
             max-width: vwt($pc-container-width);
-            // padding: 0 vwt($pc-content-padding);
         }
 
         @include mq(lg) {
             max-width: px2Rem($pc-container-width);
-            // padding: 0 px2Rem($pc-content-padding);
         }
     }
 
@@ -1407,7 +1266,6 @@
 
         @include mq(lg) {
             margin-top: px2Rem(58);
-
         }
     }
 }
@@ -1444,14 +1302,11 @@
             background: none;
             padding: 0;
             margin-top: vwt(22);
-            // align-items: center;
-            // gap: vwt(155);
             justify-content: space-between;
         }
 
         @include mq(lg) {
             margin-top: px2Rem(22);
-            // gap: px2Rem(155);
         }
     }
 
@@ -1504,7 +1359,6 @@
         @include mq(lg) {
             width: px2Rem(390);
             margin-right: px2Rem(14);
-
         }
     }
 
@@ -1733,14 +1587,11 @@
             display: flex;
             flex-wrap: wrap;
             gap: vwt(30);
-
         }
 
         @include mq(lg) {
             margin-top: px2Rem(22);
             gap: px2Rem(30);
-
-
         }
 
     }
@@ -1751,7 +1602,6 @@
         @include mq {
             width: vwt(369);
             margin-bottom: 0;
-
         }
 
         @include mq(lg) {
@@ -1763,10 +1613,6 @@
         &:hover {
             opacity: 0.5;
         }
-
-        @include mq {}
-
-        @include mq(lg) {}
     }
 
     &__card-image {
@@ -1780,9 +1626,6 @@
 
         @include mq(lg) {
             border-radius: px2Rem(24);
-
-
-
         }
     }
 
@@ -1796,7 +1639,6 @@
         @include mq {
             margin-top: vwt(8);
             margin-left: 0;
-
             font-size: vwt(19);
         }
 
@@ -1825,14 +1667,10 @@
 
         @include mq {
             width: vwt(900);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             width: px2Rem(900);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rem(83) auto px2Rem(80);
         }
     }
 
@@ -1840,14 +1678,11 @@
         margin-top: vw(16);
 
         @include mq {
-
             margin-top: vwt(22);
         }
 
         @include mq(lg) {
-
             margin-top: px2Rem(22);
-
         }
     }
 
@@ -1859,14 +1694,11 @@
 
         @include mq {
             width: auto;
-
             margin-top: vwt(30);
         }
 
         @include mq(lg) {
-
             margin-top: px2Rem(30);
-
         }
     }
 
@@ -1879,7 +1711,6 @@
 
         @include mq {
             width: auto;
-
             min-width: vwt(300);
             font-size: vwt(18);
             padding: vwt(17);
@@ -1892,7 +1723,6 @@
             font-size: px2Rem(18);
             padding: px2Rem(17);
             box-shadow: 0 px2Rem(5) 0 #066655;
-
         }
 
         &:hover {
@@ -1902,9 +1732,7 @@
             }
 
             @include mq(lg) {
-
                 box-shadow: 0 px2Rem(2) 0 #066655;
-
             }
         }
     }
@@ -1915,13 +1743,10 @@
     padding: vw(21) 0 vw(33);
 
     @include mq {
-
         padding: vwt(32) vwt($pc-content-padding);
-
     }
 
     @include mq(lg) {
-        // padding: 0 px2Rem($pc-content-padding);
         padding: px2Rem(32) px2Rem($pc-content-padding);
     }
 
@@ -1930,14 +1755,10 @@
 
         @include mq {
             width: vwt($pc-subpage-content-width);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             width: px2Rem($pc-subpage-content-width);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rsem(83) auto px2Rem(80);
         }
     }
 
@@ -1946,12 +1767,10 @@
 
         @include mq {
             margin-top: vwt(32);
-
         }
 
         @include mq(lg) {
             margin-top: px2Rem(32);
-
         }
     }
 
@@ -1966,9 +1785,6 @@
 
         @include mq(lg) {
             border-radius: px2Rem(24);
-
-
-
         }
     }
 
@@ -1982,9 +1798,6 @@
 
             @include mq(lg) {
                 bottom: px2Rem(15);
-
-
-
             }
         }
     }
@@ -1996,15 +1809,10 @@
 
         @include mq {
             margin: 0 vwt(4);
-
         }
 
         @include mq(lg) {
             margin: 0 px2Rem(4);
-
-
-
-
         }
     }
 
@@ -2018,13 +1826,10 @@
     padding-top: vw(21);
 
     @include mq {
-
         padding: vwt(27) vwt($pc-content-padding) 0;
-
     }
 
     @include mq(lg) {
-        // padding: 0 px2Rem($pc-content-padding);
         padding: px2Rem(27) px2Rem($pc-content-padding) 0;
     }
 
@@ -2034,14 +1839,10 @@
 
         @include mq {
             width: vwt($pc-subpage-content-width);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             width: px2Rem($pc-subpage-content-width);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rsem(83) auto px2Rem(80);
         }
     }
 
@@ -2058,8 +1859,6 @@
         @include mq(lg) {
             gap: px2Rem(31);
             margin-top: px2Rem(32);
-
-
         }
 
     }
@@ -2088,14 +1887,10 @@
 
         @include mq(lg) {
             border-radius: px2Rem(16);
-
-
-
         }
     }
 
     &__card-text {
-
         font-size: vw(18);
         font-weight: bold;
         margin-top: vw(7);
@@ -2111,9 +1906,6 @@
         @include mq(lg) {
             font-size: px2Rem(18);
             margin-top: px2Rem(7);
-
-
-
         }
     }
 }
@@ -2139,8 +1931,6 @@
 
         @include mq(lg) {
             width: px2Rem($pc-subpage-content-width);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rsem(83) auto px2Rem(80);
         }
     }
 
@@ -2151,19 +1941,14 @@
         margin-top: vw(8);
         display: inline-block;
 
-
         @include mq {
             margin-top: vwt(17);
-
             font-size: vwt(32);
-
         }
 
         @include mq(lg) {
             margin-top: px2Rem(17);
-
             font-size: px2Rem(32);
-
         }
     }
 }
@@ -2201,25 +1986,16 @@
         background: url(/assets/image/contact_pc.jpg) center center / cover no-repeat;
     }
 
-    @include mq(lg) {}
-
     &__button-wrapper {
         text-align: center;
         padding: vw(140) vw(16);
 
-
         @include mq {
-
             padding: vwt(185) vwt(16);
-
-
         }
 
         @include mq(lg) {
             padding: px2Rem(185) px2Rem(16);
-
-
-
         }
     }
 
@@ -2234,7 +2010,6 @@
             font-size: vwt(20);
             padding: vwt(20);
             border: vwt(2) solid $color-contrast;
-
         }
 
         @include mq(lg) {
@@ -2242,7 +2017,6 @@
             font-size: px2Rem(20);
             padding: px2Rem(20);
             border: px2Rem(2) solid $color-contrast;
-
         }
 
         &:hover {
@@ -2269,20 +2043,14 @@
     }
 
     &__container {
-        //         padding: 0 vw(16) vw(51);
-        //         margin-inline: auto;
         @include sp-container();
 
         @include mq {
             width: vwt($pc-subpage-content-width);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
         }
 
         @include mq(lg) {
             width: px2Rem($pc-subpage-content-width);
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rsem(83) auto px2Rem(80);
         }
     }
 }
