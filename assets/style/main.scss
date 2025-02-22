@@ -523,12 +523,12 @@
 
 
         @include mq {
-            max-width: vwt($pc-content-width);
+            max-width: vwt(1202);
         }
 
         @include mq(lg) {
 
-            max-width: px2Rem($pc-content-width);
+            max-width: px2Rem(1202);
         }
     }
 
@@ -657,10 +657,6 @@
         border-radius: vw(16);
         margin-bottom: vw(20);
 
-        // &:not(:first-child) {
-        //     margin-top: 1px;
-        // }
-
         @include mq {
             border-radius: vwt(16);
             margin-bottom: vwt(25);
@@ -683,7 +679,32 @@
             @include mq(lg) {
                 margin-bottom: px2Rem(24);
             }
+
+            &--margin-bottom-type2 {
+
+                @include mq {
+                    margin-bottom: vwt(25);
+
+                }
+
+                @include mq(lg) {
+                    margin-bottom: px2Rem(25);
+                }
+            }
         }
+
+        &--margin-bottom-type1 {
+
+            @include mq {
+                margin-bottom: vwt(26);
+
+            }
+
+            @include mq(lg) {
+                margin-bottom: px2Rem(26);
+            }
+        }
+
     }
 
     &__wrapper {
@@ -733,11 +754,11 @@
             padding: vw(23) vw(23) 0;
 
             @include mq {
-                padding: vwt(16) vwt(31) vwt(18) vwt(32);
+                padding: vwt(17) vwt(31) vwt(17) vwt(32);
             }
 
             @include mq(lg) {
-                padding: px2Rem(16) px2Rem(31) px2Rem(18) px2Rem(32);
+                padding: px2Rem(17) px2Rem(31) px2Rem(17) px2Rem(32);
             }
         }
     }
@@ -965,6 +986,11 @@
 
         .accordion__item--expanded & {
             margin-top: 0;
+        }
+
+        @include mq {
+            margin-top: 0;
+
         }
     }
 
@@ -2235,11 +2261,11 @@
     padding: vw(31) 0 vw(146);
 
     @include mq {
-        padding: vwt(43) vwt($pc-content-padding) vwt(50);
+        padding: vwt(43) vwt($pc-content-padding) vwt(48);
     }
 
     @include mq(lg) {
-        padding: px2Rem(43) px2Rem($pc-content-padding) px2Rem(50);
+        padding: px2Rem(43) px2Rem($pc-content-padding) px2Rem(48);
     }
 
     &__container {

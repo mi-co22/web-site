@@ -498,12 +498,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .breadcrumb__container {
-    max-width: 100vw;
+    max-width: 100.1666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .breadcrumb__container {
-    max-width: 75rem;
+    max-width: 75.125rem;
   }
 }
 .breadcrumb__list {
@@ -635,6 +635,26 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
+  .accordion__item.accordion__item--expanded--margin-bottom-type2 {
+    margin-bottom: 2.0833333333vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .accordion__item.accordion__item--expanded--margin-bottom-type2 {
+    margin-bottom: 1.5625rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .accordion__item--margin-bottom-type1 {
+    margin-bottom: 2.1666666667vw;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .accordion__item--margin-bottom-type1 {
+    margin-bottom: 1.625rem;
+  }
+}
+@media screen and (min-width: 768px) {
   .accordion__wrapper {
     width: 50vw;
     margin-inline: auto;
@@ -680,12 +700,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .accordion__item--expanded .accordion__question {
-    padding: 1.3333333333vw 2.5833333333vw 1.5vw 2.6666666667vw;
+    padding: 1.4166666667vw 2.5833333333vw 1.4166666667vw 2.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .accordion__item--expanded .accordion__question {
-    padding: 1rem 1.9375rem 1.125rem 2rem;
+    padding: 1.0625rem 1.9375rem 1.0625rem 2rem;
   }
 }
 .accordion__q-icon {
@@ -891,6 +911,11 @@ img {
 }
 .accordion__item--expanded .accordion__panel {
   margin-top: 0;
+}
+@media screen and (min-width: 768px) {
+  .accordion__panel {
+    margin-top: 0;
+  }
 }
 .accordion__action {
   flex-shrink: 0;
@@ -2086,12 +2111,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .faq {
-    padding: 3.5833333333vw 1.3333333333vw 4.1666666667vw;
+    padding: 3.5833333333vw 1.3333333333vw 4vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .faq {
-    padding: 2.6875rem 1rem 3.125rem;
+    padding: 2.6875rem 1rem 3rem;
   }
 }
 .faq__container {
