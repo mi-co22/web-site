@@ -502,7 +502,7 @@
 }
 
 .breadcrumb {
-    padding-top: vw(10);
+    padding-top: vw(9);
 
     @include mq {
         // width: vwt(1232);
@@ -519,23 +519,16 @@
     }
 
     &__container {
-        @include sp-container(363);
+        @include sp-container(361);
 
 
         @include mq {
-            // width: auto;
-            // max-width: vwt(1205);
-            // padding: 0 vwt($pc-content-padding);
-            // margin: vwt(83) auto vwt(80);
             max-width: vwt($pc-content-width);
         }
 
         @include mq(lg) {
-            // max-width: px2Rem(1205);
-            max-width: px2Rem($pc-content-width);
 
-            // padding: 0 px2Rem($pc-content-padding);
-            // margin: px2Rem(83) auto px2Rem(80);
+            max-width: px2Rem($pc-content-width);
         }
     }
 
@@ -662,7 +655,7 @@
         border: 1px solid #ccc;
         overflow: hidden;
         border-radius: vw(16);
-        margin-bottom: vw(19);
+        margin-bottom: vw(20);
 
         // &:not(:first-child) {
         //     margin-top: 1px;
@@ -723,6 +716,19 @@
 
         }
 
+        &--padding-bottom-type1 {
+            padding-bottom: vw(19);
+
+            @include mq {
+                padding-bottom: vwt(18);
+
+            }
+
+            @include mq(lg) {
+                padding-bottom: px2Rem(18);
+            }
+        }
+
         .accordion__item--expanded & {
             padding: vw(23) vw(23) 0;
 
@@ -732,9 +738,6 @@
 
             @include mq(lg) {
                 padding: px2Rem(16) px2Rem(31) px2Rem(18) px2Rem(32);
-
-
-
             }
         }
     }
@@ -800,7 +803,9 @@
         font-weight: 400;
         font-size: vw(11);
         text-align: center;
-        padding: vw(6) vw(10);
+        padding: vw(5) vw(10) vw(6);
+        // padding: vw(6) vw(10);
+
         border-radius: vw(3);
         margin-right: vw(4);
         min-width: vw(100);
@@ -847,9 +852,11 @@
     }
 
     &__answer {
+
         display: flex;
-        padding: vw(2) vw(24) vw(16);
+        padding: vw(2) vw(22) vw(17) vw(26);
         line-break: anywhere;
+
 
         @include mq {
             padding: vwt(1) vwt(32) vwt(18) vwt(32);
@@ -859,6 +866,50 @@
             padding: px2Rem(1) px2Rem(32) px2Rem(18) px2Rem(32);
 
         }
+
+        &--padding-left-type1 {
+            padding-left: vw(24);
+
+            @include mq {
+                padding-left: vwt(32);
+            }
+
+            @include mq(lg) {
+                padding-left: px2Rem(32);
+            }
+        }
+
+        &--padding-top-0 {
+            padding-top: 0;
+            padding-bottom: vw(18);
+
+            @include mq {
+                padding-top: vwt(1);
+                padding-bottom: vwt(18);
+
+            }
+
+            @include mq(lg) {
+                padding-top: px2Rem(1);
+                padding-bottom: px2Rem(18);
+
+            }
+        }
+
+        &--padding-bottom-type1 {
+            padding-bottom: vw(18);
+
+            @include mq {
+                padding-bottom: vwt(18);
+
+            }
+
+            @include mq(lg) {
+                padding-bottom: px2Rem(18);
+            }
+        }
+
+
     }
 
     &__a-icon {
@@ -910,6 +961,11 @@
     &__panel {
         background: $color-contrast;
         display: none;
+        margin-top: vw(-17);
+
+        .accordion__item--expanded & {
+            margin-top: 0;
+        }
     }
 
     &__action {
@@ -917,7 +973,7 @@
         position: relative;
         display: block;
         width: vw(18);
-        height: vw(28);
+        height: vw(26);
         margin: 0 vw(1) 0 auto;
 
         @include mq {
@@ -2176,7 +2232,7 @@
 
 /** よくあるご質問 **/
 .faq {
-    padding: vw(30) 0 vw(146);
+    padding: vw(31) 0 vw(146);
 
     @include mq {
         padding: vwt(43) vwt($pc-content-padding) vwt(50);

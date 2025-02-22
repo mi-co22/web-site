@@ -55,14 +55,15 @@ $(function () {
     //-----------------------------------------------------
     // スライダー
     //-----------------------------------------------------
-    const mySwiper = new Swiper('.swiper', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-
-    });
+    if ($('.swiper').length) {
+        const mySwiper = new Swiper('.swiper', {
+            loop: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    }
     //-----------------------------------------------------
     // アコーディオン
     //-----------------------------------------------------
