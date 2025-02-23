@@ -50,13 +50,11 @@
     @include mq {
         font-size: vwt(28);
         padding-bottom: vwt(19);
-
     }
 
     @include mq(lg) {
         font-size: px2Rem(28);
         padding-bottom: px2Rem(19);
-
     }
 
     &::after {
@@ -229,7 +227,7 @@
         flex-shrink: 0;
         font-size: vw(15);
         font-weight: 400;
-        padding: vw(16) 0 vw(8);
+        padding: vw(15) 0 vw(9);
 
         @include mq {
             font-size: vwt(14);
@@ -258,19 +256,6 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        margin-bottom: vw(9);
-
-        @include mq {
-            margin-bottom: 0;
-        }
-
-        &--fix {
-            margin-bottom: vw(11);
-
-            @include mq {
-                margin-bottom: 0;
-            }
-        }
     }
 
     &__item {
@@ -281,11 +266,6 @@
         @include mq {
             flex-direction: row;
             align-items: center;
-            padding: vwt(15) 0 vwt(17);
-        }
-
-        @include mq(lg) {
-            padding: px2Rem(15) 0 px2Rem(17);
         }
     }
 
@@ -295,16 +275,22 @@
         display: block;
         font-size: vw(15);
         margin-left: vw(1);
+        padding-bottom: vw(10);
+        line-height: 1.72;
 
         @include mq {
             display: inline-block;
             font-size: vwt(15);
             margin-left: vwt(24);
+            padding: vwt(17) 0;
+
         }
 
         @include mq(lg) {
             font-size: px2Rem(15);
             margin-left: px2Rem(24);
+            padding: px2Rem(17) 0;
+
         }
     }
 
@@ -442,13 +428,10 @@
 
     @include mq {
         padding: vwt(14) vwt($pc-content-padding);
-
     }
 
     @include mq(lg) {
         padding: px2Rem(14) px2Rem($pc-content-padding);
-
-
     }
 
     &__container {
@@ -555,15 +538,14 @@
         }
 
         @include mq(lg) {
-            width: px2Rem(200);
             padding: px2Rem(17) px2Rem(18);
+            width: px2Rem(200);
         }
     }
 
 }
 
 .accordion {
-
     &__item {
         border: 1px solid #ccc;
         overflow: hidden;
@@ -591,7 +573,7 @@
                 margin-bottom: px2Rem(24);
             }
 
-            &--margin-bottom-type2 {
+            &--type2 {
 
                 @include mq {
                     margin-bottom: vwt(25);
@@ -603,10 +585,9 @@
             }
         }
 
-        &--margin-bottom-type1 {
+        &--type1 {
             @include mq {
                 margin-bottom: vwt(26);
-
             }
 
             @include mq(lg) {
@@ -634,13 +615,7 @@
         font-weight: bold;
         cursor: pointer;
         transition: padding 0.3s ease;
-        // @include mq {
-        //     padding: vwt(16) vwt(31) vwt(18) vwt(32);
-        // }
 
-        // @include mq(lg) {
-        //     padding: px2Rem(16) px2Rem(31) px2Rem(18) px2Rem(32);
-        // }
         @include mq {
             padding: vwt(17) vwt(31) vwt(17) vwt(32);
         }
@@ -649,7 +624,7 @@
             padding: px2Rem(17) px2Rem(31) px2Rem(17) px2Rem(32);
         }
 
-        &--padding-bottom-type1 {
+        &--type1 {
             padding-bottom: vw(19);
 
             @include mq {
@@ -700,7 +675,6 @@
 
         @include mq {
             font-size: vwt(24);
-
         }
 
         @include mq(lg) {
@@ -769,7 +743,6 @@
     }
 
     &__answer {
-
         display: flex;
         padding: vw(2) vw(22) vw(17) vw(26);
         line-break: anywhere;
@@ -782,7 +755,7 @@
             padding: px2Rem(1) px2Rem(32) px2Rem(18) px2Rem(32);
         }
 
-        &--padding-left-type1 {
+        &--type1 {
             padding-left: vw(24);
 
             @include mq {
@@ -794,7 +767,7 @@
             }
         }
 
-        &--padding-top-0 {
+        &--type2 {
             padding-top: 0;
             padding-bottom: vw(18);
 
@@ -809,7 +782,7 @@
             }
         }
 
-        &--padding-bottom-type1 {
+        &--type3 {
             padding-bottom: vw(18);
 
             @include mq {
@@ -820,8 +793,6 @@
                 padding-bottom: px2Rem(18);
             }
         }
-
-
     }
 
     &__a-icon {
@@ -842,29 +813,6 @@
         @include mq(lg) {
             font-size: px2Rem(18);
             margin-top: px2Rem(5);
-        }
-    }
-
-    &__a-text {
-        margin-left: vw(12);
-        font-size: vw(15);
-
-        @include mq {
-            font-size: vwt(15);
-            margin-left: vwt(16);
-        }
-
-        @include mq(lg) {
-            font-size: px2Rem(15);
-            margin-left: px2Rem(16);
-        }
-
-        p {
-            @include lineheight(15, 28);
-
-            @include mq {
-                line-height: 1.85;
-            }
         }
     }
 
@@ -1078,7 +1026,6 @@
         transform: translateX(0%);
     }
 
-
     &__list {
         line-height: 1;
         padding: vw(22) vw(20) vw(17);
@@ -1107,7 +1054,6 @@
         margin-bottom: vw(7);
 
         @include mq {
-            display: block;
             padding: vwt(20) vwt(15);
             margin-bottom: 0;
             font-size: vwt(16);
@@ -1130,10 +1076,7 @@
             }
         }
     }
-
 }
-
-
 
 /* ===========================================
  * フッター
@@ -1186,12 +1129,12 @@
             z-index: 100;
 
             @include mq {
-                height: 75%;
-                top: vwt(5);
+                height: 85%;
+                top: vwt(2);
             }
 
             @include mq(lg) {
-                top: px2Rem(5);
+                top: px2Rem(2);
             }
         }
     }
@@ -1218,7 +1161,6 @@
     @include mq {
         margin-top: vwt(151);
         padding: 0 vwt($pc-content-padding);
-
     }
 
     @include mq(lg) {
@@ -1419,7 +1361,6 @@
 
         @include mq {
             width: vwt($pc-container-width);
-
             margin-inline: auto;
         }
 
@@ -1437,6 +1378,7 @@
             flex-wrap: wrap;
             gap: vwt(30);
             margin-top: vwt(22);
+            justify-content: space-between;
         }
 
         @include mq(lg) {
@@ -1450,13 +1392,12 @@
         overflow: hidden;
         margin-bottom: vw(20);
         border-radius: vw(24);
-
         box-shadow: 0 vw(2) vw(10) rgba(0, 0, 0, 0.05);
 
         @include mq {
-            width: vwt(369);
+            width: 31%;
             border-radius: vwt(24);
-
+            box-shadow: 0 vwt(2) vwt(10) rgba(0, 0, 0, 0.05);
             margin-bottom: 0;
         }
 
@@ -1464,7 +1405,6 @@
             width: px2Rem(369);
             border-radius: px2Rem(24);
             box-shadow: 0 px2Rem(2) px2Rem(10) rgba(0, 0, 0, 0.05);
-
         }
     }
 
@@ -1488,12 +1428,10 @@
 
         @include mq {
             font-size: vwt(19);
-
         }
 
         @include mq(lg) {
             font-size: px2Rem(19);
-
         }
 
     }
@@ -1536,7 +1474,6 @@
         @include mq(lg) {
             gap: px2Rem(50);
             margin-top: px2Rem(23);
-
         }
 
         &--3 {
@@ -1544,13 +1481,10 @@
 
             @include mq {
                 margin-top: vwt(40);
-
             }
 
             @include mq(lg) {
                 margin-top: px2Rem(40);
-
-
             }
         }
     }
@@ -1570,7 +1504,6 @@
         &--3 {
             @include mq {
                 width: vwt(333);
-
             }
 
             @include mq(lg) {
@@ -1613,6 +1546,7 @@
             display: flex;
             flex-wrap: wrap;
             gap: vwt(30);
+            justify-content: space-between;
         }
 
         @include mq(lg) {
@@ -1626,7 +1560,7 @@
         margin-bottom: vw(27);
 
         @include mq {
-            width: vwt(369);
+            width: 31.1%;
             margin-bottom: 0;
         }
 
@@ -1677,19 +1611,18 @@
 
 /** お知らせ **/
 .news {
-    padding: vw(52) 0 vw(61);
+    padding: vw(52) 0 vw(62);
 
     @include mq {
-        padding: vwt(57) vwt($pc-content-padding) vwt(70);
+        padding: vwt(57) vwt($pc-content-padding) vwt(69);
     }
 
     @include mq(lg) {
-        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(70);
+        padding: px2Rem(57) px2Rem($pc-content-padding) px2Rem(69);
     }
 
     &__container {
         @include sp-container();
-
 
         @include mq {
             width: vwt(900);
@@ -1720,11 +1653,11 @@
 
         @include mq {
             width: auto;
-            margin-top: vwt(30);
+            margin-top: vwt(33);
         }
 
         @include mq(lg) {
-            margin-top: px2Rem(30);
+            margin-top: px2Rem(33);
         }
     }
 
@@ -1875,7 +1808,6 @@
     &__container {
         @include sp-container();
 
-
         @include mq {
             width: vwt($pc-subpage-content-width);
         }
@@ -1899,7 +1831,6 @@
             gap: px2Rem(31);
             margin-top: px2Rem(32);
         }
-
     }
 
     &__card {
@@ -1973,6 +1904,10 @@
         }
     }
 
+    &__text {
+        font-weight: bold;
+    }
+
     &__attention {
         font-family: "Montserrat", serif;
         font-weight: 700;
@@ -1982,11 +1917,13 @@
 
         @include mq {
             margin-top: vwt(17);
+            margin-right: vwt(1);
             font-size: vwt(32);
         }
 
         @include mq(lg) {
             margin-top: px2Rem(17);
+            margin-right: px2Rem(1);
             font-size: px2Rem(32);
         }
     }
