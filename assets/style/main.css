@@ -671,15 +671,16 @@ img {
   padding: 5.8974358974vw 5.8974358974vw 4.358974359vw;
   font-weight: bold;
   cursor: pointer;
+  transition: padding 0.3s ease;
 }
 @media screen and (min-width: 768px) {
   .accordion__question {
-    padding: 1.3333333333vw 2.5833333333vw 1.5vw 2.6666666667vw;
+    padding: 1.4166666667vw 2.5833333333vw 1.4166666667vw 2.6666666667vw;
   }
 }
 @media screen and (min-width: 1200px) {
   .accordion__question {
-    padding: 1rem 1.9375rem 1.125rem 2rem;
+    padding: 1.0625rem 1.9375rem 1.0625rem 2rem;
   }
 }
 .accordion__question--padding-bottom-type1 {
@@ -913,6 +914,7 @@ img {
   background: #fff;
   display: none;
   margin-top: -4.358974359vw;
+  transition: margin 0.3s ease;
 }
 .accordion__item--expanded .accordion__panel {
   margin-top: 0;

@@ -633,13 +633,20 @@
         padding: vw(23) vw(23) vw(17);
         font-weight: bold;
         cursor: pointer;
+        transition: padding 0.3s ease;
+        // @include mq {
+        //     padding: vwt(16) vwt(31) vwt(18) vwt(32);
+        // }
 
+        // @include mq(lg) {
+        //     padding: px2Rem(16) px2Rem(31) px2Rem(18) px2Rem(32);
+        // }
         @include mq {
-            padding: vwt(16) vwt(31) vwt(18) vwt(32);
+            padding: vwt(17) vwt(31) vwt(17) vwt(32);
         }
 
         @include mq(lg) {
-            padding: px2Rem(16) px2Rem(31) px2Rem(18) px2Rem(32);
+            padding: px2Rem(17) px2Rem(31) px2Rem(17) px2Rem(32);
         }
 
         &--padding-bottom-type1 {
@@ -773,7 +780,6 @@
 
         @include mq(lg) {
             padding: px2Rem(1) px2Rem(32) px2Rem(18) px2Rem(32);
-
         }
 
         &--padding-left-type1 {
@@ -866,6 +872,7 @@
         background: $color-contrast;
         display: none;
         margin-top: vw(-17);
+        transition: margin 0.3s ease;
 
         .accordion__item--expanded & {
             margin-top: 0;
