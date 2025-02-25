@@ -1914,6 +1914,7 @@
         font-size: vw(32);
         margin-top: vw(8);
         display: inline-block;
+        color: $color-main;
 
         @include mq {
             margin-top: vwt(17);
