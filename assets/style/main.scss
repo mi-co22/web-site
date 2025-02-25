@@ -1360,7 +1360,7 @@
         @include sp-container();
 
         @include mq {
-            width: vwt($pc-container-width);
+            width: 100%;
             margin-inline: auto;
         }
 
@@ -1530,7 +1530,7 @@
         @include sp-container();
 
         @include mq {
-            width: vwt($pc-container-width);
+            width: 100%;
         }
 
         @include mq(lg) {
