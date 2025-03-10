@@ -492,6 +492,7 @@
     border-collapse: collapse;
     border-top: 1px solid #ccc;
     border-right: 1px solid #ccc;
+
     @include mq {
         width: vwt(740);
         margin-inline: auto;
@@ -571,6 +572,7 @@
                 margin-bottom: px2Rem(26);
             }
         }
+
         &--expanded {
             margin-bottom: vw(24);
 
@@ -1109,7 +1111,7 @@
 
     @include mq(lg) {
         font-size: px2Rem(14);
-        padding-left:  px2Rem(11);
+        padding-left: px2Rem(11);
 
     }
 
@@ -1456,6 +1458,7 @@
             width: px2Rem(1100);
         }
     }
+
     &__button-lists {
         display: flex;
         flex-wrap: wrap;
@@ -1463,11 +1466,11 @@
 
         @include mq {
             margin-top: vwt(23);
-            gap:vwt(40) vwt(50);
+            gap: vwt(40) vwt(50);
         }
 
         @include mq(lg) {
-            gap:px2Rem(40) px2Rem(50);
+            gap: px2Rem(40) px2Rem(50);
             margin-top: px2Rem(23);
         }
     }
@@ -1965,6 +1968,7 @@
         font-size: vw(20);
         padding: vw(21);
         border: vw(2) solid $color-contrast;
+
         @include mq {
             max-width: fit-content;
             min-width: vwt(358);
