@@ -1103,13 +1103,14 @@
     justify-content: center;
 
     @include mq {
-        font-size: vwt(15);
-        transform: translateX(vw(5));
+        font-size: vwt(14);
+        padding-left: vwt(11);
     }
 
     @include mq(lg) {
-        font-size: px2Rem(15);
-        transform: translateX(px2Rem(5));
+        font-size: px2Rem(14);
+        padding-left:  px2Rem(11);
+
     }
 
     &__item-line {
@@ -1127,12 +1128,8 @@
             z-index: 100;
 
             @include mq {
-                height: 85%;
-                top: vwt(2);
-            }
-
-            @include mq(lg) {
-                top: px2Rem(2);
+                height: 95%;
+                top: 4%;
             }
         }
     }
@@ -1963,12 +1960,13 @@
     }
 
     &__button {
-        min-width: vw(358);
+        width: vw(358);
+        max-width: 100%;
         font-size: vw(20);
         padding: vw(21);
         border: vw(2) solid $color-contrast;
-
         @include mq {
+            max-width: fit-content;
             min-width: vwt(358);
             font-size: vwt(20);
             padding: vwt(20);
