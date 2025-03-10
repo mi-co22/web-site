@@ -58,6 +58,7 @@ $(function () {
     if ($('.swiper').length) {
         const mySwiper = new Swiper('.swiper', {
             loop: true,
+            spaceBetween: '3%',
             pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
